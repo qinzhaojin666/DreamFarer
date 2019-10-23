@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{2dd9cde8-de25-48a8-bc86-f40c703f6a17}">
+        <property name="name">
+            <value>GrabbedDistance</value>
+        </property>
+        <relationship name="folder">
+            <destination>{09decfd1-c82c-4e16-949b-f2303894522a}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{466d9377-1674-4fe4-855d-5cee5d61893f}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{466d9377-1674-4fe4-855d-5cee5d61893f}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
