@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{2b98b249-1636-4664-abbb-2ce70dac169a}">
         <property name="assetPath">
-            <value>trash-can-bounce.wav</value>
+            <value>1-City/trash-can-bounce.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

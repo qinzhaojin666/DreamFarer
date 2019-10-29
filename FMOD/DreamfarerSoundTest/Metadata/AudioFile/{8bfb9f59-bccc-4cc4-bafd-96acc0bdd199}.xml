@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{8bfb9f59-bccc-4cc4-bafd-96acc0bdd199}">
         <property name="assetPath">
-            <value>truck-door-open-close.wav</value>
+            <value>1-City/Moving/truck-door-open-close.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

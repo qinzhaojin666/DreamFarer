@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{c1eb140b-458d-4d3a-b406-caf5f681963a}">
         <property name="assetPath">
-            <value>keys-jingle-series.wav</value>
+            <value>1-City/Moving/keys-jingle-series.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

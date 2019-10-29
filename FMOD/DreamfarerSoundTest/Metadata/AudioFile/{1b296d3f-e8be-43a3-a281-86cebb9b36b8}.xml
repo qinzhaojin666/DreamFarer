@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{1b296d3f-e8be-43a3-a281-86cebb9b36b8}">
         <property name="assetPath">
-            <value>hwy-134-in-burbank-binaural.wav</value>
+            <value>1-City/hwy-134-in-burbank-binaural.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

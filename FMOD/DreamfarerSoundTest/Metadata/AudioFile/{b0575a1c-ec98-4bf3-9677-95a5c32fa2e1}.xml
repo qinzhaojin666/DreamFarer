@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{b0575a1c-ec98-4bf3-9677-95a5c32fa2e1}">
         <property name="assetPath">
-            <value>car-alarm.flac</value>
+            <value>1-City/car-alarm.flac</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>
