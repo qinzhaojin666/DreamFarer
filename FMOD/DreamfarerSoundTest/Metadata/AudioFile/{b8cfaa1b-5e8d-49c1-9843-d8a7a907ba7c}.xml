@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{b8cfaa1b-5e8d-49c1-9843-d8a7a907ba7c}">
         <property name="assetPath">
-            <value>moving_memory_vocals.wav</value>
+            <value>1-City/Moving/moving_memory_vocals.wav</value>
         </property>
         <property name="isStreaming">
             <value>true</value>

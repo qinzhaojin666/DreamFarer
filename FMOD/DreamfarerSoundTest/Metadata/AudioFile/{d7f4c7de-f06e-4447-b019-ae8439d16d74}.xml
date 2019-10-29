@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="AudioFile" id="{d7f4c7de-f06e-4447-b019-ae8439d16d74}">
         <property name="assetPath">
-            <value>cardboardboxes-01.wav</value>
+            <value>1-City/Moving/cardboardboxes-01.wav</value>
         </property>
         <property name="frequencyInKHz">
             <value>48</value>

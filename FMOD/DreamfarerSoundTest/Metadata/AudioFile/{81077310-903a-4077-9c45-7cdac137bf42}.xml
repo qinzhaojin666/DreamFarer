@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{81077310-903a-4077-9c45-7cdac137bf42}">
+        <property name="assetPath">
+            <value>1-City/Job/office_door.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>5.6216780045351475</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7c0f6144-dbdf-41d2-be21-d7ff629c1174}</destination>
+        </relationship>
+    </object>
+</objects>

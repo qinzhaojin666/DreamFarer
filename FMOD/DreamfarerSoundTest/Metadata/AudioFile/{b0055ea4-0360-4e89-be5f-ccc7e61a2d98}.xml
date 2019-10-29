@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{b0055ea4-0360-4e89-be5f-ccc7e61a2d98}">
+        <property name="assetPath">
+            <value>1-City/Weather/weatherreport.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>63.75</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7c0f6144-dbdf-41d2-be21-d7ff629c1174}</destination>
+        </relationship>
+    </object>
+</objects>

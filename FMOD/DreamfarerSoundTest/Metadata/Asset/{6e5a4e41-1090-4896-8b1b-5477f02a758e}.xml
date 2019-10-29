@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EncodableAsset" id="{6e5a4e41-1090-4896-8b1b-5477f02a758e}">
+        <property name="assetPath">
+            <value>3-Island/</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{7c0f6144-dbdf-41d2-be21-d7ff629c1174}</destination>
+        </relationship>
+    </object>
+</objects>
