@@ -8,7 +8,7 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(test());
+        //StartCoroutine(test());
     }
 
     // Update is called once per frame
@@ -26,17 +26,17 @@ public class Manager : MonoBehaviour
     {
         foreach (Transform child in alleyObjects.transform)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.3f);
             if (child.gameObject.CompareTag("popup"))
             {
                 print("popup found");
                 float count = 0;
-                while (count <= 90)
+                while (count <= 45)
                 {
-                    child.Rotate(new Vector3(0, 0, -1f));
+                    child.Rotate(new Vector3(0, 0, -2f));
                     //child.RotateAround( , new Vector3(-1f, 0, 0));
-                    count += 1;
-                    yield return new WaitForSeconds(.00001f);
+                    count += 2;
+                    yield return new WaitForSeconds(.0001f);
                 }
             }
             child.gameObject.SetActive(false);
