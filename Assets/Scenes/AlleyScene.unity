@@ -4376,7 +4376,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803296798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -4581,6 +4581,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805614223}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1806733201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1155112558459254, guid: efe266538a8dcda4dbd04fbff7997053,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121619671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1806733202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806733201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1828417666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,6 +4614,7 @@ GameObject:
   - component: {fileID: 1828417669}
   - component: {fileID: 1828417668}
   - component: {fileID: 1828417667}
+  - component: {fileID: 1828417674}
   m_Layer: 0
   m_Name: hat
   m_TagString: Untagged
@@ -4710,6 +4730,22 @@ Transform:
   m_Father: {fileID: 1803976525}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 26.1, y: -63.2, z: 0}
+--- !u!114 &1828417674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828417666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8fde03b69099448ef4806ca5415e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoryPath: event:/1-City/WeatherMemory
+  grabber: {fileID: 1828417667}
+  playerCamera: {fileID: 1806733201}
+  maxDistance: 1
 --- !u!1 &1839372254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,6 +5739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: usePositionTracking
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 81745770263951070, guid: efe266538a8dcda4dbd04fbff7997053,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe266538a8dcda4dbd04fbff7997053, type: 3}
