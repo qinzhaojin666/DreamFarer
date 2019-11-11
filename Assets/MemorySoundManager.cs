@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD;
-public class MemorySoundParameters : MonoBehaviour
+public class MemorySoundManager : MonoBehaviour
 {
     [FMODUnity.EventRef] public string memoryPath;
     public OVRGrabbable grabber;
@@ -16,14 +16,14 @@ public class MemorySoundParameters : MonoBehaviour
     /*
      * Begins the memory sound.
      */
-    void BeginSound() {
+    void BeginMemorySound() {
         memoryInstance.start();
     }
 
     /*
      * Stops the memory sound and releases its resources.
      */
-    void EndSound() {
+    void EndMemorySound() {
         memoryInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         memoryInstance.release();
     }
@@ -33,13 +33,13 @@ public class MemorySoundParameters : MonoBehaviour
     {
         memoryInstance = RuntimeManager.CreateInstance(memoryPath);
         memoryInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
-        BeginSound();
+        BeginMemorySound();
     }
 
     /*
      * Given a distance between the object and listener, returns the
      *   corresponding parameter value. For now, returns a simple scaling
-     *   based on maxDistance, but will be swapped out for something smoother.
+     *   based on maxDistance, but may be swapped out for something smoother.
      */
     float getParameterFromDistance(float distance) {
         return Mathf.Min(1.0f, distance / maxDistance);
