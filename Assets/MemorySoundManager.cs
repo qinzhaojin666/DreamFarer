@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 using FMOD;
-public class MemorySoundManager : MonoBehaviour
-{
+public class MemorySoundManager : MonoBehaviour {
+
     [FMODUnity.EventRef] public string memoryPath;
     public OVRGrabbable grabber;
     public GameObject playerCamera;
     public float maxDistance = 10;
 
     // Delta = max change in parameter per frame (allows for a smooth transition)
-    public float delta = 0.075f;
+    public float delta = 0.75f;
 
     private FMOD.Studio.EventInstance memoryInstance;
     private readonly string grabbedDistName = "grabbedDistance";
@@ -32,8 +32,7 @@ public class MemorySoundManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         memoryInstance = RuntimeManager.CreateInstance(memoryPath);
         memoryInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
         BeginMemorySound();
@@ -42,32 +41,34 @@ public class MemorySoundManager : MonoBehaviour
     /*
      * Given a distance between the object and listener, returns the
      *   corresponding parameter value in [0, 1]. For now, returns a simple scaling
-     *   based on maxDistance, but may be swapped out for something smoother.
+     *   based on maxDistance, but may be swapped out for something more complex if needed.
      */
     float getParameterFromDistance(float distance) {
         return Mathf.Min(1.0f, distance / maxDistance);
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         /*
          * GrabbedDistance behavior:
          *  - The higher the grabbedDistance is, the more dulled the sound is, and the initial loop
          *    can only be broken out of with a grabbedDistance of 0.
-         *  - If the object is currently grabbed, the parameter decreases by delta each frame until it reaches 0.
-         *  - Otherwise, the parameter is set to the distance between the object and the player listener.
+         *  - If the object is being grabbed, the target value is 0. Otherwise, it's based on the distance
+         *    between the listener and the object.
+         *  - Each frame, the grabbedDistance parameter gets closer to the target by at most delta.
          */
 
-        float grabbedDistance;
-        memoryInstance.getParameterByName(grabbedDistName, out grabbedDistance);
+        memoryInstance.getParameterByName(grabbedDistName, out float grabbedDistance);
+        float target;
+
         if (grabber.isGrabbed) {
-            grabbedDistance = Mathf.MoveTowards(grabbedDistance, 0.0f, delta);
+            target = 0.0f;
         }
         else {
             float dist = Vector3.Distance(gameObject.transform.position, playerCamera.transform.position);
-            grabbedDistance = Mathf.MoveTowards(grabbedDistance, getParameterFromDistance(dist), delta);
+            target = getParameterFromDistance(dist);
         }
-        memoryInstance.setParameterByName(grabbedDistName, grabbedDistance);
+        // Move towards the target by at most delta
+        memoryInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(grabbedDistance, target, delta * Time.deltaTime));
     }
 }
