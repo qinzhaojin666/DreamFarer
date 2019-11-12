@@ -55,7 +55,7 @@ public class MemorySoundManager : MonoBehaviour {
          *    can only be broken out of with a grabbedDistance of 0.
          *  - If the object is being grabbed, the target value is 0. Otherwise, it's based on the distance
          *    between the listener and the object.
-         *  - Each frame, the grabbedDistance parameter gets closer to the target by at most delta.
+         *  - Each frame, the grabbedDistance parameter gets closer to the target by at most delta per second.
          */
 
         memoryInstance.getParameterByName(grabbedDistName, out float grabbedDistance);
@@ -68,7 +68,7 @@ public class MemorySoundManager : MonoBehaviour {
             float dist = Vector3.Distance(gameObject.transform.position, playerCamera.transform.position);
             target = getParameterFromDistance(dist);
         }
-        // Move towards the target by at most delta
+        // Move towards the target by at most delta per second
         memoryInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(grabbedDistance, target, delta * Time.deltaTime));
     }
 }
