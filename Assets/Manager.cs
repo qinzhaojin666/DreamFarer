@@ -6,6 +6,7 @@ public class Manager : MonoBehaviour
 {
     public GameObject alleyObjects;
     public GameObject barObjects;
+    float time;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time += Time.deltaTime;
     }
 
    public void startDisableAlleyObjects()
