@@ -5,12 +5,12 @@ using FMODUnity;
 using FMOD;
 public class MemorySoundManager : MonoBehaviour {
 
-    [FMODUnity.EventRef] public string memoryPath;
+    [EventRef] public string memoryPath;
     public OVRGrabbable grabber;
     public GameObject playerCamera;
     public float maxDistance = 10;
 
-    // Delta = max change in parameter per frame (allows for a smooth transition)
+    // Delta = max change in parameter per second (allows for a smooth transition)
     public float delta = 0.75f;
 
     private FMOD.Studio.EventInstance memoryInstance;
@@ -19,14 +19,14 @@ public class MemorySoundManager : MonoBehaviour {
     /*
      * Begins the memory sound.
      */
-    void BeginMemorySound() {
+    public void BeginMemorySound() {
         memoryInstance.start();
     }
 
     /*
      * Stops the memory sound and releases its resources.
      */
-    void EndMemorySound() {
+    public void EndMemorySound() {
         memoryInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         memoryInstance.release();
     }
@@ -43,7 +43,7 @@ public class MemorySoundManager : MonoBehaviour {
      *   corresponding parameter value in [0, 1]. For now, returns a simple scaling
      *   based on maxDistance, but may be swapped out for something more complex if needed.
      */
-    float getParameterFromDistance(float distance) {
+    private float getParameterFromDistance(float distance) {
         return Mathf.Min(1.0f, distance / maxDistance);
     }
 
