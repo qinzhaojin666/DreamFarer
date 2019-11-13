@@ -7,8 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001C57797FAA8 isAsync 0 updatePeriod 0.02
-[WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
+[LOG] AsyncManager::init                       : manager 000001C577985728 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,6 +16,173 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
+[LOG] SoundI::release                          : cityambience (000001C63FF9EAE8)
+[LOG] SoundI::release                          :     cityambience (000001C53B4C3C18)
+[LOG] SoundI::release                          :     cityambience (000001C5230F5418)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
+[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
 [LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C57E420918 : node = 000001C6572AE0C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C5D1F82028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C57E420918
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C6572AE1D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bar_chatter', format=2, channels=2, frequency=48000, lengthbytes=656768, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.254821.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C57E420918
+[LOG] SoundI::getSubSound                      : sound 000001C57E420918.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C53AE0DDF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C53AE0DDF8
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C63FF9EAE8 : node = 000001C57E6FCD70
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C5D1F82028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C63FF9EAE8
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C63FF9E938 : node = 000001C57E6FCFF0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C5D1F82028.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57E6FCE80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C63FF9E5D8 : node = 000001C57E6FCEB0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C5D1F82028.  list count = 1
+[LOG] SystemI::createSound                     :     filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='back_track', format=2, channels=2, frequency=48000, lengthbytes=744992, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.228888.
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C63FF9E0C8 : node = 000001C57E6FC9B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C5D1F82028.  list count = 2
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C63FF9EAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C63FF9E938
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57E6FD100
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tall_girl', format=2, channels=2, frequency=48000, lengthbytes=196960, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.645007.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C63FF9E938
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C63FF9E5D8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57E6FCFC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='short_guy', format=2, channels=2, frequency=48000, lengthbytes=211648, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.577514.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C63FF9E5D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C63FF9E0C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57E6FCAC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='tall_guy', format=2, channels=2, frequency=48000, lengthbytes=200256, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.587981.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C63FF9E0C8
+[LOG] SoundI::getSubSound                      : sound 000001C63FF9EAE8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001C63FF9E938.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001C63FF9E5D8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001C63FF9E0C8.  Subsound index 0 / 1
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C635154D38 : node = 000001C57739B1F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C5D1F82028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C635154D38
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSound                     :     setdata soundi = 000001C6351544C8 : node = 000001C57843B1F0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001C5D1F82028.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57739B300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 29500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bar_chatter', format=2, channels=2, frequency=48000, lengthbytes=656768, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.254821.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C635154D38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C6351544C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 7560768
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 38848
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C57843B300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 53500
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bar_chatter', format=2, channels=2, frequency=48000, lengthbytes=656768, lengthpcm=3699376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.254821.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C6351544C8
+[LOG] SoundI::getSubSound                      : sound 000001C635154D38.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000001C6351544C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : back_track (000001C63FF9EAE8)
+[LOG] SoundI::release                          :     back_track (000001C5D1995D98)
+[LOG] SoundI::release                          :     back_track (000001C635154828)
+[LOG] SoundI::release                          : short_guy (000001C63FF9E5D8)
+[LOG] SoundI::release                          :     short_guy (000001C53B4C3258)
+[LOG] SoundI::release                          :     short_guy (000001C635154318)
+[LOG] SoundI::release                          : bar_chatter (000001C6351544C8)
+[LOG] SoundI::release                          :     bar_chatter (000001C63FB415C8)
+[LOG] SoundI::release                          :     bar_chatter (000001C57E4205B8)
+[LOG] SoundI::release                          : bar_chatter (000001C635154D38)
+[LOG] SoundI::release                          :     bar_chatter (000001C523996938)
+[LOG] SoundI::release                          :     bar_chatter (000001C57E420408)
+[LOG] SoundI::release                          : bar_chatter (000001C57E420918)
+[LOG] SoundI::release                          :     bar_chatter (000001C6405108E8)
+[LOG] SoundI::release                          :     bar_chatter (000001C53AE0DDF8)
+[LOG] SoundI::release                          : tall_guy (000001C63FF9E0C8)
+[LOG] SoundI::release                          :     tall_guy (000001C53B4C3598)
+[LOG] SoundI::release                          :     tall_guy (000001C6351549D8)
+[LOG] SoundI::release                          : tall_girl (000001C63FF9E938)
+[LOG] SoundI::release                          :     tall_girl (000001C53B4C3C18)
+[LOG] SoundI::release                          :     tall_girl (000001C635154B88)
+[LOG] SoundI::release                          :  (000001C5D4FAD728)
+[LOG] SoundI::release                          :     dooropenONLY (000001C64050F8A8)
+[LOG] SoundI::release                          :  (000001C576A3B558)
+[LOG] SoundI::release                          :     tvoff (000001C640510A88)
+[LOG] SoundI::release                          :  (000001C576A3B3E8)
+[LOG] SoundI::release                          :     static (000001C640510F68)
+[LOG] SoundI::release                          :  (000001C576A3B108)
+[LOG] SoundI::release                          :     coat-zip (000001C64050FF28)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [WRN] OutputWASAPI::mixerThread                : Starvation detected in WASAPI output buffer!
