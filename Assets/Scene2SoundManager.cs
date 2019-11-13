@@ -7,14 +7,25 @@ using FMODUnity;
 
 public class Scene2SoundManager : MonoBehaviour
 {
-    float time;
-    bool started;
-    //float[] timings;
-    //float[] events;
-    //Queue<float> timings_Q = new Queue<float>();
-    //Queue<float> events_Q = new Queue<float>();
-    //OrderedDictionary events;
-    public Queue<KeyValuePair<float, int>> events;
+    private float time;
+    private bool started;
+
+    public List<float> eventTimes = new List<float>() {
+        0.216f, 0.64f, 1.226f, 2.002f, 2.003f, 2.678f, 2.976f, 4.411f, 4.448f, 5.891f, 5.892f, 5.893f,
+        6.332f, 6.333f, 6.84f, 8.342f, 8.459f, 8.46f, 10.213f, 10.214f, 10.673f, 11.264f, 11.724f,
+        12.36f, 12.752f, 13.117f, 15.586f, 16f, 16.256f, 17.41f, 17.978f, 18.844f, 19.331f, 21.049f,
+        21.455f, 21.456f, 22.438f, 22.439f, 23.615f, 25.915f, 27.561f, 27.562f, 27.563f, 29.175f,
+        30.474f, 30.74f, 31.75f, 33.116f, 34.474f, 34.744f, 36.02f, 37.752f, 38.338f, 38.649f, 39.231f,
+        41.012f, 41.45f, 41.892f, 43.655f, 44.421f, 46.117f, 47.005f, 47.248f, 48.701f, 48.702f, 50.739f,
+        54.135f, 54.689f, 58.91f, 59.176f, 60.231f, 63.027f, 65.611f, 65.612f
+    };
+    public List<int> eventCodes = new List<int>() {
+        0, 0, 1, 1, 2, 2, 0, 0, 1, 0, 1, 2, 0, 2, 1, 1, 0, 2, 0, 2, 2, 2, 1, 1, 3, 0, 0,
+        -1, 1, 1, 2, 2, 0, 0, 1, 2, 1, 2, 0, -2, 0, 3, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 2,
+        2, 2, -3, 2, 5, 1, 1, 1, 1, 4, 1, -4, 1, 4
+    };
+
+    private Queue<KeyValuePair<float, int>> events;
     private int[] persons_stage;
     public GameObject[] people;
     public GameObject playerListener;
@@ -54,11 +65,16 @@ public class Scene2SoundManager : MonoBehaviour
 
         backingTrackInstance = RuntimeManager.CreateInstance(backingTrackPath);
         backingTrackInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerListener));
+
+        // Move all items from the timing list/code to the queue
+        for (int i = 0; i < eventTimes.Count; i++) {
+            events.Enqueue(new KeyValuePair<float, int>(eventTimes[i], eventCodes[i]));
+        }
     }
 
     // Update is called once per frame
     void Update() {
-        if (started) {
+        if (started && events.Count > 0) {
             time += Time.deltaTime;
             var current = events.Peek();
             if (current.Key >= time) {
