@@ -117,10 +117,17 @@ public class Scene2SoundManager : MonoBehaviour
         else if (e < numPeople) {
             // this is the toggle light case
             GameObject person = people[e];
+            //foreach (Transform child in person.transform)
+            //{
+            //    if (child.tag == "light")
+
+            //}
+            person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
         }
         else if (e < 2*numPeople) {
             // this is the change/leave stage
             GameObject person = people[e % numPeople];
+            // go to the next stage
         }
         yield return null;
 
