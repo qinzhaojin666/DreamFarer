@@ -6,6 +6,7 @@ TagManager:
   tags:
   - popup
   - light
+  - grabbable
   layers:
   - Default
   - TransparentFX
