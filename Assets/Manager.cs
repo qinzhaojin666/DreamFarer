@@ -6,12 +6,22 @@ public class Manager : MonoBehaviour
 {
     public GameObject alleyObjects;
     public GameObject barObjects;
+    public Scene2SoundManager scene2_sound_manager;
     float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        //StartCoroutine(test());
+        foreach (Transform child in barObjects.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        foreach (Transform child in alleyObjects.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+      
+        StartCoroutine(test());
     }
 
     // Update is called once per frame
@@ -72,6 +82,7 @@ public class Manager : MonoBehaviour
             //}
             child.gameObject.SetActive(true);
         }
+
     }
 
 

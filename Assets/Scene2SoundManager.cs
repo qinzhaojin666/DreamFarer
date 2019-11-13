@@ -109,7 +109,26 @@ public class Scene2SoundManager : MonoBehaviour
         phaseTarget = p;
     }
 
-   private IEnumerator PerformAction(int e) {
+    private void movePersonsStage(int person_index)
+    {
+        if (persons_stage[person_index] == 0)
+        {
+            persons_stage[person_index]++;
+            GameObject person = people[person_index];
+            person.transform.GetChild(0).gameObject.SetActive(false);
+            person.transform.GetChild(1).gameObject.SetActive(true);
+
+        }
+        else if (persons_stage[person_index] == 1)
+        {
+            persons_stage[person_index]++;
+            GameObject person = people[person_index];
+            person.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+    }
+
+    private IEnumerator PerformAction(int e) {
         if (e < 0) {
             // this is the parameter case
             SetAmbienceParameter(getPhaseFromIntCode(e));
@@ -126,7 +145,9 @@ public class Scene2SoundManager : MonoBehaviour
         }
         else if (e < 2*numPeople) {
             // this is the change/leave stage
-            GameObject person = people[e % numPeople];
+            //GameObject person = people[e % numPeople];
+            movePersonsStage(e % numPeople);
+
             // go to the next stage
         }
         yield return null;
