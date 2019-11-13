@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9206676825255074683
+--- !u!114 &-9152380485822144113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,20 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/3-Island/Call
-  m_EditorClassIdentifier: 
-  Path: event:/3-Island/Call
-  guid: 95c45b62e05cd7439dc359a153232692
-  Banks:
-  - {fileID: -6061930432090676920}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier:
+  Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
+    Bank.bank
+  SubDir:
+  lastModified: 637091527960721164
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 7599616
+  Exists: 1
 --- !u!114 &-9130630104713302056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,7 +32,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/2-Party/TallGuy
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/2-Party/TallGuy
   guid: a29f12e3c1bb5e44b1dd49a340db7998
   Banks:
@@ -57,10 +55,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091527960721164
   LoadResult: 0
   FileSizes:
@@ -78,7 +76,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -95,7 +93,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/JobMemory
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/JobMemory
   guid: 52dc11fcd862424ead77b1cbd639e937
   Banks:
@@ -119,7 +117,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/WeatherMemory
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/WeatherMemory
   guid: 4deb6c17fa7cb24a820d6acb08da6850
   Banks:
@@ -143,7 +141,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -160,7 +158,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -177,7 +175,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/Ambience
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/Ambience
   guid: 8dc42578c6295d4ba20598889c871227
   Banks:
@@ -200,10 +198,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091527960740813
   LoadResult: 0
   FileSizes:
@@ -221,7 +219,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -238,7 +236,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -255,7 +253,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -272,7 +270,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -289,7 +287,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -306,7 +304,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -323,7 +321,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -340,7 +338,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -357,7 +355,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -374,7 +372,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -391,7 +389,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -408,10 +406,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637079767286544962
   LoadResult: 0
   FileSizes:
@@ -429,10 +427,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637092660850569079
   LoadResult: 0
   FileSizes:
@@ -450,7 +448,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/2-Party/RestaurantAmbience
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/2-Party/RestaurantAmbience
   guid: 1000923e7a378a4d88d7bcb399fdc327
   Banks:
@@ -474,7 +472,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -491,10 +489,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091527960721164
   LoadResult: 0
   FileSizes:
@@ -512,7 +510,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -529,10 +527,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637092660850589018
   LoadResult: 0
   FileSizes:
@@ -550,7 +548,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -567,7 +565,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -584,7 +582,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -601,17 +599,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091494884554467
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1104
   Exists: 1
---- !u!114 &-2596191001552262736
+--- !u!114 &-3623279030102430472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -622,13 +620,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-2531532602212164565
+--- !u!114 &-3441603134662622611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -637,14 +635,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
-  Name: GrabbedDistance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier:
+  Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
+    Bank.strings.bank
+  SubDir:
+  lastModified: 637091527960740813
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1104
+  Exists: 1
 --- !u!114 &-2473357013914664549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +658,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -673,7 +675,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -690,7 +692,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -707,7 +709,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -724,7 +726,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -741,7 +743,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -758,7 +760,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -775,7 +777,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -792,7 +794,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -809,7 +811,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -826,7 +828,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -843,7 +845,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -860,7 +862,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -877,7 +879,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   EditorBanks:
   - {fileID: -4781585266479548290}
   - {fileID: -6061930432090676920}
@@ -912,7 +914,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -929,7 +931,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -946,7 +948,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -963,7 +965,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -980,7 +982,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Traffic/x
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: x
   Min: 0
   Max: 25
@@ -997,7 +999,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/2-Party/ShortGuy
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/2-Party/ShortGuy
   guid: ac2b9ae7b57baa45b2261840beaaebf3
   Banks:
@@ -1020,7 +1022,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/PartyMemory
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/PartyMemory
   guid: 6674a2a7ae13e54892a03d03172f412b
   Banks:
@@ -1043,17 +1045,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091527960740813
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1104
   Exists: 1
---- !u!114 &2621578958626860703
+--- !u!114 &2331437608535132194
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1063,13 +1065,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
-  Name: GrabbedDistance
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
+  m_Name: parameter:/RestaurantAmbience/phase
+  m_EditorClassIdentifier:
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
 --- !u!114 &2634312701440144395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,10 +1083,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637074662504091887
   LoadResult: 0
   FileSizes:
@@ -1102,7 +1104,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1119,7 +1121,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/GrabbedDistTest/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1136,7 +1138,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/GrabbedDistTest
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/GrabbedDistTest
   guid: 20da9729533971448eb6ffba03b84fda
   Banks:
@@ -1160,7 +1162,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1177,7 +1179,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1194,7 +1196,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1211,7 +1213,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/2-Party/Band
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/2-Party/Band
   guid: d3e3e9365103a9499ecbae2db9fee595
   Banks:
@@ -1234,7 +1236,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/2-Party/TallGirl
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/2-Party/TallGirl
   guid: 196f3f87f0d92b47b854e46ea18de9c2
   Banks:
@@ -1257,7 +1259,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/3-Island/Ambience
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/3-Island/Ambience
   guid: 77f1b3aef7f518469e5f98a6751b4fc1
   Banks:
@@ -1280,7 +1282,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Traffic
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/Traffic
   guid: ea9c2e2d8677f9429d721b53af5af831
   Banks: []
@@ -1303,7 +1305,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1320,10 +1322,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/Admin/Documents/DreamFarer/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637079767286485715
   LoadResult: 0
   FileSizes:
@@ -1341,7 +1343,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1358,7 +1360,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1375,11 +1377,28 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
   Default: 1
+  Exists: 1
+--- !u!114 &5171474980374560662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MovingMemory/GrabbedDistance
+  m_EditorClassIdentifier:
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &5709850923477404292
 MonoBehaviour:
@@ -1392,7 +1411,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -1409,7 +1428,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -1426,7 +1445,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/1-City/MovingMemory
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/1-City/MovingMemory
   guid: 4f2de7065113aa4aa877974eb2b4d81b
   Banks:
@@ -1450,7 +1469,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1467,7 +1486,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1484,10 +1503,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.strings.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091494884554467
   LoadResult: 0
   FileSizes:
@@ -1505,10 +1524,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091494884534518
   LoadResult: 0
   FileSizes:
@@ -1526,7 +1545,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1543,7 +1562,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/WeatherMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1560,7 +1579,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -1577,7 +1596,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1594,7 +1613,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/MovingMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1611,7 +1630,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1628,7 +1647,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -1645,7 +1664,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/RestaurantAmbience/phase
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: phase
   Min: 1
   Max: 4
@@ -1662,7 +1681,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/JobMemory/GrabbedDistance
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Name: GrabbedDistance
   Min: 0
   Max: 1
@@ -1679,10 +1698,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637074662504071932
   LoadResult: 0
   FileSizes:
@@ -1700,10 +1719,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master Bank.bank
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
-  SubDir: 
+  SubDir:
   lastModified: 637091494884534518
   LoadResult: 0
   FileSizes:
@@ -1721,7 +1740,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/3-Island/PhoneRing
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   Path: event:/3-Island/PhoneRing
   guid: 58ef20bb71fe7a4d97e0f0beb501ee37
   Banks:
