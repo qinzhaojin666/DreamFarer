@@ -8,7 +8,7 @@ public class MemorySoundManager : MonoBehaviour {
     [EventRef] public string memoryPath;
     public OVRGrabbable grabber;
     public GameObject playerCamera;
-    public float maxDistance = 10;
+    public float maxDistance = 1;
 
     // Delta = max change in parameter per second (allows for a smooth transition)
     public float delta = 0.75f;

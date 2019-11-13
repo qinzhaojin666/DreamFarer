@@ -1702,6 +1702,7 @@ GameObject:
   - component: {fileID: 636785506}
   - component: {fileID: 636785505}
   - component: {fileID: 636785504}
+  - component: {fileID: 636785510}
   m_Layer: 0
   m_Name: lease
   m_TagString: Untagged
@@ -1817,6 +1818,23 @@ Transform:
   m_Father: {fileID: 1803976525}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 49.92, y: 5.45, z: 0}
+--- !u!114 &636785510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636785503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8fde03b69099448ef4806ca5415e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoryPath: event:/1-City/MovingMemory
+  grabber: {fileID: 636785504}
+  playerCamera: {fileID: 1806733201}
+  maxDistance: 1
+  delta: 0.75
 --- !u!1 &641517701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6338,6 +6356,7 @@ GameObject:
   - component: {fileID: 1871317276}
   - component: {fileID: 1871317275}
   - component: {fileID: 1871317274}
+  - component: {fileID: 1871317280}
   m_Layer: 0
   m_Name: id card
   m_TagString: Untagged
@@ -6453,6 +6472,23 @@ Transform:
   m_Father: {fileID: 1803976525}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 53.85, y: 77.59, z: 0}
+--- !u!114 &1871317280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871317273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec8fde03b69099448ef4806ca5415e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  memoryPath: event:/1-City/JobMemory
+  grabber: {fileID: 1871317274}
+  playerCamera: {fileID: 1806733201}
+  maxDistance: 1
+  delta: 0.75
 --- !u!1 &1881174177
 GameObject:
   m_ObjectHideFlags: 0

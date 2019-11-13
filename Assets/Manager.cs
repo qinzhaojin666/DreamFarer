@@ -21,7 +21,7 @@ public class Manager : MonoBehaviour
             child.gameObject.SetActive(true);
         }
       
-        StartCoroutine(test());
+        //StartCoroutine(test());
     }
 
     // Update is called once per frame
