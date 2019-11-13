@@ -46,17 +46,22 @@ public class Manager : MonoBehaviour
         foreach (Transform child in alleyObjects.transform)
         {
             yield return new WaitForSeconds(.1f);
-            if (child.gameObject.CompareTag("popup"))
+            //if (child.gameObject.CompareTag("popup"))
+            //{
+            //    print("popup found");
+            //    float count = 0;
+            //    while (count <= 45)
+            //    {
+            //        child.Rotate(new Vector3(0, 0, -2f));
+            //        //child.RotateAround( , new Vector3(-1f, 0, 0));
+            //        count += 2;
+            //        yield return new WaitForSeconds(.0001f);
+            //    }
+            //}
+            if (child.gameObject.CompareTag("grabbable"))
             {
-                print("popup found");
-                float count = 0;
-                while (count <= 45)
-                {
-                    child.Rotate(new Vector3(0, 0, -2f));
-                    //child.RotateAround( , new Vector3(-1f, 0, 0));
-                    count += 2;
-                    yield return new WaitForSeconds(.0001f);
-                }
+                MemorySoundManager m = child.gameObject.GetComponent<MemorySoundManager>();
+                m.EndMemorySound();
             }
             child.gameObject.SetActive(false);
         }
@@ -82,6 +87,11 @@ public class Manager : MonoBehaviour
             //}
             child.gameObject.SetActive(true);
         }
+        yield return new WaitForSeconds(.25f);
+        scene2_sound_manager.StartAmbience();
+        yield return new WaitForSeconds(.75f);
+        scene2_sound_manager.StartConverstaions();
+
 
     }
 
