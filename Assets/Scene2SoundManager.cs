@@ -134,7 +134,8 @@ public class Scene2SoundManager : MonoBehaviour
         {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
-            person.transform.GetChild(0).gameObject.SetActive(false);
+            //person.transform.GetChild(0).gameObject.SetActive(false);
+            StartCoroutine(FadeOut3D(person.transform.GetChild(0).transform, 0, true, 2));
             person.transform.GetChild(1).gameObject.SetActive(true);
 
         }
@@ -142,7 +143,8 @@ public class Scene2SoundManager : MonoBehaviour
         {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
-            person.transform.GetChild(1).gameObject.SetActive(false);
+            StartCoroutine(FadeOut3D(person.transform.GetChild(1).transform,0, true, 3));
+            //person.transform.GetChild(1).gameObject.SetActive(false);
         }
 
     }
@@ -171,6 +173,27 @@ public class Scene2SoundManager : MonoBehaviour
         }
         yield return null;
 
+    }
+
+    public IEnumerator FadeOut3D(Transform t, float targetAlpha, bool isVanish, float duration)
+    {
+        Renderer sr = t.GetComponent<Renderer>();
+        float diffAlpha = (targetAlpha - sr.material.color.a);
+
+        float counter = 0;
+        while (counter < duration)
+        {
+            float alphaAmount = sr.material.color.a + (Time.deltaTime * diffAlpha) / duration;
+            sr.material.color = new Color(sr.material.color.r, sr.material.color.g, sr.material.color.b, alphaAmount);
+
+            counter += Time.deltaTime;
+            yield return null;
+        }
+        sr.material.color = new Color(sr.material.color.r, sr.material.color.g, sr.material.color.b, targetAlpha);
+        if (isVanish)
+        {
+            sr.transform.gameObject.SetActive(false);
+        }
     }
 
 
