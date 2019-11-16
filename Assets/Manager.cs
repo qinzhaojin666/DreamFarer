@@ -8,12 +8,16 @@ public class Manager : MonoBehaviour
     public GameObject barObjects;
     public GameObject islandObjects;
 
-    public Scene2SoundManager scene2_sound_manager;
+    private Scene1SoundManager scene1_sound_manager;
+    private Scene2SoundManager scene2_sound_manager;
     float time;
 
     // Start is called before the first frame update
     void Start()
     {
+        scene1_sound_manager = gameObject.GetComponent<Scene1SoundManager>();
+        scene2_sound_manager = gameObject.GetComponent<Scene2SoundManager>();
+
         foreach (Transform child in barObjects.transform)
         {
             child.gameObject.SetActive(false);
@@ -59,6 +63,8 @@ public class Manager : MonoBehaviour
 
     IEnumerator disableAlleyObjects()
     {
+        scene1_sound_manager.EndAllMemorySounds();
+
         foreach (Transform child in alleyObjects.transform)
         {
             yield return new WaitForSeconds(.1f);
@@ -74,14 +80,12 @@ public class Manager : MonoBehaviour
             //        yield return new WaitForSeconds(.0001f);
             //    }
             //}
-            if (child.gameObject.CompareTag("grabbable"))
-            {
-                MemorySoundManager m = child.gameObject.GetComponent<MemorySoundManager>();
-                m.EndMemorySound();
-            }
             child.gameObject.SetActive(false);
         }
         startEnableBarObjects();
+        scene1_sound_manager.EndAmbience();
+        yield return new WaitForSeconds(0.5f);
+        scene1_sound_manager.EndPartyTransitionEvent();
     }
 
     IEnumerator enableBarObjects()
@@ -97,14 +101,12 @@ public class Manager : MonoBehaviour
         //foreach (Transform child in barObjects.transform)
         //{
         //    yield return new WaitForSeconds(.1f);
-        
+
         //    child.gameObject.SetActive(true);
         //}
-        yield return new WaitForSeconds(.25f);
         scene2_sound_manager.StartAmbience();
-        yield return new WaitForSeconds(.75f);
+        yield return new WaitForSeconds(1f);
         scene2_sound_manager.StartConverstaions();
-
 
     }
 

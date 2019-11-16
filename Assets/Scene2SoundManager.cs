@@ -87,6 +87,7 @@ public class Scene2SoundManager : MonoBehaviour
                 events.Dequeue();
             }
             // Move at most phaseDelta towards the target per second
+            ambienceInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerListener));
             ambienceInstance.getParameterByName(phaseParamName, out float currentPhase);
             ambienceInstance.setParameterByName(phaseParamName, Mathf.MoveTowards(currentPhase, phaseTarget, phaseDelta * Time.deltaTime));
         }
@@ -103,10 +104,6 @@ public class Scene2SoundManager : MonoBehaviour
         }
     }
 
-    public void StartAmbience() {
-        ambienceInstance.start();
-    }
-
 
     public void StopConversations() {
         backingTrackInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
@@ -117,8 +114,13 @@ public class Scene2SoundManager : MonoBehaviour
         }
     }
 
+    public void StartAmbience() {
+        ambienceInstance.start();
+    }
+
     public void StopAmbience() {
         ambienceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        ambienceInstance.release();
     }
 
     private float getPhaseFromIntCode(int e) {
