@@ -5,8 +5,8 @@ using FMOD;
 using FMODUnity;
 
 
-public class Scene2SoundManager : MonoBehaviour
-{
+public class Scene2SoundManager : MonoBehaviour {
+
     private float time;
     private bool started;
 
@@ -51,8 +51,7 @@ public class Scene2SoundManager : MonoBehaviour
     private readonly int numPeople = 3;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         personSoundInstances = new FMOD.Studio.EventInstance[numPeople];
         events = new Queue<KeyValuePair<float, int>>();
 
@@ -134,8 +133,7 @@ public class Scene2SoundManager : MonoBehaviour
 
     private void movePersonsStage(int person_index)
     {
-        if (persons_stage[person_index] == 0)
-        {
+        if (persons_stage[person_index] == 0) {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
             //person.transform.GetChild(0).gameObject.SetActive(false);
@@ -143,8 +141,7 @@ public class Scene2SoundManager : MonoBehaviour
             person.transform.GetChild(1).gameObject.SetActive(true);
 
         }
-        else if (persons_stage[person_index] == 1)
-        {
+        else if (persons_stage[person_index] == 1) {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
             StartCoroutine(FadeOut3D(person.transform.GetChild(1).transform,0, true, 3));
@@ -174,22 +171,20 @@ public class Scene2SoundManager : MonoBehaviour
             movePersonsStage(e % numPeople);
 
             // go to the next stage
-        } else
-        {
+        }
+        else {
             manager.startDisableBarObjects();
         }
         yield return null;
 
     }
 
-    public IEnumerator FadeOut3D(Transform t, float targetAlpha, bool isVanish, float duration)
-    {
+    public IEnumerator FadeOut3D(Transform t, float targetAlpha, bool isVanish, float duration) {
         Renderer sr = t.GetComponent<Renderer>();
         float diffAlpha = (targetAlpha - sr.material.color.a);
 
         float counter = 0;
-        while (counter < duration)
-        {
+        while (counter < duration) {
             float alphaAmount = sr.material.color.a + (Time.deltaTime * diffAlpha) / duration;
             sr.material.color = new Color(sr.material.color.r, sr.material.color.g, sr.material.color.b, alphaAmount);
 
@@ -197,8 +192,7 @@ public class Scene2SoundManager : MonoBehaviour
             yield return null;
         }
         sr.material.color = new Color(sr.material.color.r, sr.material.color.g, sr.material.color.b, targetAlpha);
-        if (isVanish)
-        {
+        if (isVanish) {
             sr.transform.gameObject.SetActive(false);
         }
     }
