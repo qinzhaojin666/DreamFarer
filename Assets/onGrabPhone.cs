@@ -26,5 +26,6 @@ public class OnGrabPhone : MonoBehaviour
     void whenGrabbed()
     {
         //manger.startDisableAlleyObjects();
+
     }
 }
