@@ -4,8 +4,8 @@ using UnityEngine;
 using FMOD;
 using FMODUnity;
 
-public class Scene1SoundManager : MonoBehaviour
-{
+public class Scene1SoundManager : MonoBehaviour {
+
     public static readonly int numMemoryObjects = 3;
     private static readonly string grabbedDistName = "grabbedDistance";
 
@@ -66,8 +66,7 @@ public class Scene1SoundManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         partyTransitionInitiated = false;
         for (int i = 0; i < numMemoryObjects; i++) {
             memoryInstances[i] = RuntimeManager.CreateInstance(memoryPaths[i]);
@@ -88,8 +87,7 @@ public class Scene1SoundManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         //if (active) {
             if (partyTransitionGrabber.isGrabbed) {
                 partyTransitionInitiated = true;

@@ -4795,6 +4795,7 @@ GameObject:
   - component: {fileID: 1454292189}
   - component: {fileID: 1454292192}
   - component: {fileID: 1454292191}
+  - component: {fileID: 1454292193}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -4887,6 +4888,23 @@ MonoBehaviour:
   partyTransitionGrabber: {fileID: 1591540070}
   playerCamera: {fileID: 1806733201}
   maxMemoryDistance: 1
+--- !u!114 &1454292193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454292188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4ae6d0d82788c40bb4cfea656bb481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambiencePath: event:/3-Island/Ambience
+  ringPath: event:/3-Island/PhoneRing
+  callPath: event:/3-Island/Call
+  playerCamera: {fileID: 1806733201}
+  phone: {fileID: 0}
 --- !u!1 &1473907340
 GameObject:
   m_ObjectHideFlags: 0
