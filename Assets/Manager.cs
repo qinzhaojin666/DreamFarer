@@ -82,7 +82,7 @@ public class Manager : MonoBehaviour {
 
        for(int i = barObjects.transform.childCount-1; i >= 0; i--) {
             Transform child = barObjects.transform.GetChild(i);
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.01f);
 
             child.gameObject.SetActive(true);
         }
