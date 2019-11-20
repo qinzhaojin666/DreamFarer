@@ -29,6 +29,7 @@ public class Scene2SoundManager : MonoBehaviour {
     private Queue<KeyValuePair<float, int>> events;
     private int[] persons_stage;
     public GameObject[] people;
+    private bool[] light_bit = { false, false, false };
     public GameObject playerListener;
 
     [EventRef] public string[] personSoundPaths;
@@ -163,7 +164,18 @@ public class Scene2SoundManager : MonoBehaviour {
             //    if (child.tag == "light")
 
             //}
-            person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
+            if (!light_bit[e])
+            {
+            //person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
+
+                StartCoroutine(FadeLight(person.transform.GetChild(2).GetComponent<Light>(), 0f, 2f, 0.2f));
+                light_bit[e] = !light_bit[e];
+            } else
+            {
+                StartCoroutine(FadeLight(person.transform.GetChild(2).GetComponent<Light>(), 2f, 0f, 0.2f));
+                light_bit[e] = !light_bit[e];
+            }
+            //person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
         }
         else if (e < 2*numPeople) {
             // this is the change/leave stage
@@ -177,6 +189,22 @@ public class Scene2SoundManager : MonoBehaviour {
         }
         yield return null;
 
+    }
+
+    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime)
+    {
+        float t = 0.0f;
+
+        while (t < fadeTime)
+        {
+            t += Time.deltaTime;
+
+            l.intensity = Mathf.Lerp(fadeStart, fadeEnd, t / fadeTime);
+            print("yo");
+            yield return null;
+        }
+        yield return null;
+            
     }
 
     public IEnumerator FadeOut3D(Transform t, float targetAlpha, bool isVanish, float duration) {

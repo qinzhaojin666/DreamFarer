@@ -32,7 +32,7 @@ public class Manager : MonoBehaviour {
             }
         }
 
-        //StartCoroutine(test());
+        StartCoroutine(test());
     }
 
     // Update is called once per frame
