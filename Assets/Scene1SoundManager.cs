@@ -59,7 +59,7 @@ public class Scene1SoundManager : MonoBehaviour {
                 BeginPartyTransitionEvent();
             }
             else {
-                memoryObjects[currentMemory].SetActive(true);
+                memoryObjects[currentMemory+1].SetActive(true);
                 BeginMemorySound(currentMemory+1);
             }
             currentMemory++;
@@ -139,52 +139,5 @@ public class Scene1SoundManager : MonoBehaviour {
             EnableNextObject();
         }
 
-        /*
-         * GrabbedDistance behavior:
-         *  - The higher the grabbedDistance is, the more dulled the sound is, and the initial loop
-         *    can only be broken out of with a grabbedDistance of 0.
-         *  - If the object is being grabbed, the target value is 0. Otherwise, it's based on the distance
-         *    between the listener and the object.
-         *  - Each frame, the grabbedDistance parameter gets closer to the target by at most delta per second.
-
-        float ambientTarget = 1.0f;
-        float partyTarget = 1.0f;
-
-        for (int i = 0; i < numMemoryObjects; i++) {
-            memoryInstances[i].getParameterByName(grabbedDistName, out float grabbedDistance);
-
-            if (partyTransitionInitiated) {
-                grabbedDistTargets[i] = 1;
-                ambientTarget = 0;
-                partyTarget = 0;
-            }
-            else {
-                if (memoryGrabbers[i].isGrabbed) {
-                    grabbedDistTargets[i] = 0.0f;
-                }
-                else {
-                    float dist = Vector3.Distance(memoryObjects[i].transform.position, playerCamera.transform.position);
-                    grabbedDistTargets[i] = getParameterFromDistance(dist);
-                }
-                // Move towards the target by at most delta per second
-                ambientTarget = Mathf.Min(grabbedDistTargets[i], ambientTarget);
-
-                float partyDist = Vector3.Distance(partyTransitionObject.transform.position, playerCamera.transform.position);
-                partyTarget = getParameterFromDistance(partyDist);
-                ambientTarget = Mathf.Min(ambientTarget, partyTarget);
-            }
-
-            memoryInstances[i].setParameterByName(grabbedDistName, Mathf.MoveTowards(grabbedDistance, grabbedDistTargets[i], delta * Time.deltaTime));
-        }
-
-        // Set party transition target
-        partyTransitionInstance.getParameterByName(grabbedDistName, out float partyGrabbedDist);
-        partyTransitionInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(partyGrabbedDist, partyTarget, delta * Time.deltaTime));
-        partyTransitionInstance.set3DAttributes(RuntimeUtils.To3DAttributes(partyTransitionObject));
-
-        // Set ambient noise target to the min grabbedDist found
-        ambienceInstance.getParameterByName(grabbedDistName, out float ambientGrabbedDist);
-        ambienceInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(ambientGrabbedDist, ambientTarget, delta * Time.deltaTime));
-        */
     }
 }
