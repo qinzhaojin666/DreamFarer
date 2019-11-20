@@ -26,10 +26,13 @@ public class Manager : MonoBehaviour {
             child.gameObject.SetActive(false);
         }
         foreach (Transform child in alleyObjects.transform) {
-            child.gameObject.SetActive(true);
+            if (!child.gameObject.CompareTag("dontEnable"))
+            {
+                child.gameObject.SetActive(true);
+            }
         }
 
-        StartCoroutine(test());
+        //StartCoroutine(test());
     }
 
     // Update is called once per frame
@@ -84,7 +87,10 @@ public class Manager : MonoBehaviour {
             Transform child = barObjects.transform.GetChild(i);
             yield return new WaitForSeconds(.01f);
 
-            child.gameObject.SetActive(true);
+            if (!child.gameObject.CompareTag("dontEnable"))
+            {
+                child.gameObject.SetActive(true);
+            }
         }
         //foreach (Transform child in barObjects.transform)
         //{
@@ -110,7 +116,10 @@ public class Manager : MonoBehaviour {
     IEnumerator enableIslandObjects() {
         foreach (Transform child in islandObjects.transform) {
             yield return new WaitForSeconds(.1f);
-            child.gameObject.SetActive(true);
+            if (!child.gameObject.CompareTag("dontEnable"))
+            {
+                child.gameObject.SetActive(true);
+            }
         }
         scene3_sound_manager.StartAmbience();
         yield return new WaitForSeconds(10f);
