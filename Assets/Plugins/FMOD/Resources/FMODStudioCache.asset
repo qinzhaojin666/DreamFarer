@@ -16,7 +16,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-9098851416512578272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +40,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 77070
+--- !u!114 &-9076959611082827028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-8597493876102008830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +164,7 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7167706179141954593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +182,40 @@ MonoBehaviour:
   Max: 4
   Default: 1
   Exists: 0
+--- !u!114 &-6788255477466310318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/phase
+  m_EditorClassIdentifier: 
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &-6201583674139063506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MovingMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6115201598064936256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +357,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4882009077295469963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,7 +486,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -5013782909625963978}
+  - {fileID: 782737583850607451}
   MinDistance: 0
   MaxDistance: 5.2000003
   Length: 19235
@@ -612,7 +663,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1227730207499646293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,12 +761,13 @@ MonoBehaviour:
   - {fileID: 3657026952412614214}
   - {fileID: -9098851416512578272}
   - {fileID: 804417439111692810}
+  - {fileID: 5032834527866326543}
   EditorParameters: []
   MasterBanks:
   - {fileID: 835634048850705268}
   StringsBanks:
   - {fileID: 4011132501133668449}
-  stringsBankWriteTime: 637098647685300197
+  stringsBankWriteTime: 637098650106009846
   cacheVersion: 3
 --- !u!114 &29563564776873644
 MonoBehaviour:
@@ -802,6 +854,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &782737583850607451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WeatherMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &804417439111692810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,11 +909,11 @@ MonoBehaviour:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.bank
   SubDir: 
-  lastModified: 637098647685280250
+  lastModified: 637098650105989893
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 5573664
+    Value: 5595232
   Exists: 1
 --- !u!114 &1071459595908600949
 MonoBehaviour:
@@ -973,8 +1042,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 8635688625696961352}
-  - {fileID: -7337839846902867950}
+  - {fileID: -9076959611082827028}
+  - {fileID: -6788255477466310318}
   MinDistance: 1
   MaxDistance: 20
   Length: 16500
@@ -995,6 +1064,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3227665533614001841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JobMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3354115245476689115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,7 +1192,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -9208390811811183838}
+  - {fileID: 4600343705567106170}
   MinDistance: 1
   MaxDistance: 20
   Length: 84500
@@ -1142,11 +1228,11 @@ MonoBehaviour:
   Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
     Bank.strings.bank
   SubDir: 
-  lastModified: 637098647685300197
+  lastModified: 637098650106009846
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1278
+    Value: 1332
   Exists: 1
 --- !u!114 &4091616158381768394
 MonoBehaviour:
@@ -1199,6 +1285,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &4600343705567106170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &4646878472943180040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1274,10 +1377,33 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 6454676441860738506}
+  - {fileID: -6201583674139063506}
   MinDistance: 0
   MaxDistance: 5.4
   Length: 24290
+--- !u!114 &5032834527866326543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/1-City/MemoryFadeIn
+  m_EditorClassIdentifier: 
+  Path: event:/1-City/MemoryFadeIn
+  guid: 90aec667722cda4b8429a1c7d5b652de
+  Banks:
+  - {fileID: 835634048850705268}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3500
 --- !u!114 &5301453508466723971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,7 +1522,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6550927616344520273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,7 +1719,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8797916734131422629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,7 +1757,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -1278700980958762060}
+  - {fileID: 3227665533614001841}
   MinDistance: 0
   MaxDistance: 4.4
   Length: 35000
