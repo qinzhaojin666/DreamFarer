@@ -6511,6 +6511,7 @@ MonoBehaviour:
   callPath: event:/3-Island/Call
   playerCamera: {fileID: 1806733201}
   phone: {fileID: 1889347722}
+  phoneGrabber: {fileID: 1889347724}
 --- !u!1 &1493436636
 GameObject:
   m_ObjectHideFlags: 0

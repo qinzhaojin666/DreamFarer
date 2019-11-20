@@ -17,7 +17,7 @@ public class Scene3SoundManager : MonoBehaviour {
     private FMOD.Studio.EventInstance ringInstance;
     private FMOD.Studio.EventInstance callInstance;
 
-    private OVRGrabbable phoneGrabber;
+    public OVRGrabbable phoneGrabber;
     private bool ringing = false;
 
     private void StartSoundEvent(FMOD.Studio.EventInstance instance) {
@@ -56,7 +56,6 @@ public class Scene3SoundManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        phoneGrabber = phone.GetComponent<OVRGrabbable>();
         ambienceInstance = RuntimeManager.CreateInstance(ambiencePath);
         ringInstance = RuntimeManager.CreateInstance(ringPath);
         callInstance = RuntimeManager.CreateInstance(callPath);
