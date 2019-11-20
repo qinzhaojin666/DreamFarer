@@ -29,7 +29,7 @@ public class Manager : MonoBehaviour {
             child.gameObject.SetActive(true);
         }
 
-        //StartCoroutine(test());
+        StartCoroutine(test());
     }
 
     // Update is called once per frame
@@ -93,14 +93,14 @@ public class Manager : MonoBehaviour {
         //    child.gameObject.SetActive(true);
         //}
         scene2_sound_manager.StartAmbience();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         scene2_sound_manager.StartConverstaions();
 
     }
 
     IEnumerator disableBarObjects() {
         foreach (Transform child in barObjects.transform) {
-            yield return new WaitForSeconds(.1f);
+            yield return new WaitForSeconds(.01f);
       
             child.gameObject.SetActive(false);
         }

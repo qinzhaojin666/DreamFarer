@@ -42,6 +42,22 @@ public class Scene1SoundManager : MonoBehaviour {
 
     public void BeginMemorySound(int i) {
         memoryInstances[i].start();
+
+
+
+    }
+
+    public void enableNextObject(int i)
+    {
+         i = i + 1;
+        if (i == 3)
+        {
+            partyTransitionGrabber.gameObject.SetActive(true);
+        } else
+        {
+            memoryObjects[i].SetActive(true);
+        }
+
     }
 
     public void EndMemorySound(int i) {
