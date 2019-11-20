@@ -12,6 +12,7 @@ public class Scene3SoundManager : MonoBehaviour {
 
     public GameObject playerCamera;
     public GameObject phone;
+    public GameObject phoneBooth;
 
     private FMOD.Studio.EventInstance ambienceInstance;
     private FMOD.Studio.EventInstance ringInstance;
@@ -38,8 +39,12 @@ public class Scene3SoundManager : MonoBehaviour {
     }
 
     public void StartRing() {
+            
         ringing = true;
         StartSoundEvent(ringInstance);
+        phoneBooth.SetActive(true);
+        phone.SetActive(true);
+        
     }
 
     public void StopRing() {
