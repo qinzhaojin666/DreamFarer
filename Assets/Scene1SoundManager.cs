@@ -15,6 +15,7 @@ public class Scene1SoundManager : MonoBehaviour {
     [EventRef] public string[] memoryPaths;
     [EventRef] public string ambiencePath;
     [EventRef] public string partyTransitionPath;
+    [EventRef] public string fadeNoisePath;
 
     public GameObject[] memoryObjects;
     public GameObject partyTransitionObject;
@@ -41,10 +42,8 @@ public class Scene1SoundManager : MonoBehaviour {
     }
 
     public void BeginMemorySound(int i) {
+        RuntimeManager.PlayOneShotAttached(fadeNoisePath, memoryObjects[i]);
         memoryInstances[i].start();
-
-
-
     }
 
     public void enableNextObject(int i)
@@ -73,6 +72,7 @@ public class Scene1SoundManager : MonoBehaviour {
 
  
     public void BeginPartyTransitionEvent() {
+        RuntimeManager.PlayOneShotAttached(fadeNoisePath, partyTransitionObject);
         partyTransitionInstance.start();
     }
 
