@@ -45,6 +45,9 @@ public class Scene1SoundManager : MonoBehaviour {
 
     public void BeginMemorySound(int i) {
         RuntimeManager.PlayOneShotAttached(fadeNoisePath, memoryObjects[i]);
+        RuntimeManager.AttachInstanceToGameObject(memoryInstances[i],
+                                                  memoryObjects[i].transform,
+                                                  memoryObjects[i].GetComponent<Rigidbody>());
         memoryInstances[i].start();
     }
 
@@ -93,7 +96,6 @@ public class Scene1SoundManager : MonoBehaviour {
         partyTransitionInitiated = false;
         for (int i = 0; i < numMemoryObjects; i++) {
             memoryInstances[i] = RuntimeManager.CreateInstance(memoryPaths[i]);
-            RuntimeManager.AttachInstanceToGameObject(memoryInstances[i], memoryObjects[i].transform, memoryObjects[i].GetComponent<Rigidbody>());
             grabbedDistTargets[i] = 0.5f;
         }
         ambienceInstance = RuntimeManager.CreateInstance(ambiencePath);
