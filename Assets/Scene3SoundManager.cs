@@ -10,9 +10,13 @@ public class Scene3SoundManager : MonoBehaviour {
     [EventRef] public string ringPath;
     [EventRef] public string callPath;
 
+    public Material endSky;
+
     public GameObject playerCamera;
     public GameObject phone;
     public GameObject phoneBooth;
+    public Light sun;
+    private bool callDone = false;
 
     private FMOD.Studio.EventInstance ambienceInstance;
     private FMOD.Studio.EventInstance ringInstance;
@@ -54,6 +58,7 @@ public class Scene3SoundManager : MonoBehaviour {
 
     public void StartCall() {
         StartSoundEvent(callInstance);
+        callDone = true;
     }
     public void StopCall() {
         StopSoundEvent(callInstance);
@@ -70,6 +75,30 @@ public class Scene3SoundManager : MonoBehaviour {
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera.transform));
     }
 
+
+    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime)
+    {
+        float t = 0.0f;
+
+        while (t < fadeTime)
+        {
+            t += Time.deltaTime;
+
+            l.intensity = Mathf.Lerp(fadeStart, fadeEnd, t / fadeTime);
+            print("yo");
+            yield return null;
+        }
+        yield return null;
+
+    }
+
+    public void endScene()
+    {
+        StartCoroutine(FadeLight(sun, 0f, 1f, 5f));
+        RenderSettings.skybox = endSky;
+
+    }
+
     // Update is called once per frame
     void Update() {
         if (phoneGrabber.isGrabbed && ringing) {
@@ -78,5 +107,11 @@ public class Scene3SoundManager : MonoBehaviour {
         }
 
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera.transform));
+        callInstance.getPlaybackState(out FMOD.Studio.PLAYBACK_STATE state);
+        if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED && callDone)
+        {
+            StopCall();
+            endScene();
+        }
     }
 }

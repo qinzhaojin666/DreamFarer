@@ -31,6 +31,7 @@ public class Scene2SoundManager : MonoBehaviour {
     public GameObject[] people;
     private bool[] light_bit = { false, false, false };
     public GameObject playerListener;
+    public GameObject[] peopleGroups;
 
     [EventRef] public string[] personSoundPaths;
     [EventRef] public string backingTrackPath;
@@ -102,6 +103,7 @@ public class Scene2SoundManager : MonoBehaviour {
         for (int i = 0; i < numPeople; i++) {
             personSoundInstances[i].start();
         }
+        StartCoroutine(changeBackground());
     }
 
 
@@ -149,6 +151,16 @@ public class Scene2SoundManager : MonoBehaviour {
             //person.transform.GetChild(1).gameObject.SetActive(false);
         }
 
+    }
+
+    private IEnumerator changeBackground()
+    {
+        for (int i = 1; i < peopleGroups.Length; i++)
+        {
+            yield return new WaitForSeconds(10f);
+            peopleGroups[i - 1].SetActive(false);
+            peopleGroups[i].SetActive(true);
+        }
     }
 
     private IEnumerator PerformAction(int e) {

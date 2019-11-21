@@ -78,24 +78,48 @@ public class Manager : MonoBehaviour {
             //{
 
             //}
-                //{
-                //    print("popup found");
-                //    float count = 0;
-                //    while (count <= 45)
-                //    {
-                //        child.Rotate(new Vector3(0, 0, -2f));
-                //        //child.RotateAround( , new Vector3(-1f, 0, 0));
-                //        count += 2;
-                //        yield return new WaitForSeconds(.0001f);
-                //    }
-                //}
+            //{
+            //    print("popup found");
+            //    float count = 0;
+            //    while (count <= 45)
+            //    {
+            //        child.Rotate(new Vector3(0, 0, -2f));
+            //        //child.RotateAround( , new Vector3(-1f, 0, 0));
+            //        count += 2;
+            //        yield return new WaitForSeconds(.0001f);
+            //    }
+            //}
+            if (!child.gameObject.CompareTag("dontEnable"))
+            {
                 child.gameObject.SetActive(false);
+            } else if (child.gameObject.activeInHierarchy)
+            {
+                OVRGrabbable g = child.GetComponent<OVRGrabbable>();
+                if (g.isGrabbed)
+                {
+                    StartCoroutine(disableAfterGrabEnd(child, g));
+                }
+                else
+                {
+                    child.gameObject.SetActive(false);
+                }
+            }
 
         }
         startEnableBarObjects();
         scene1_sound_manager.EndAmbience();
         yield return new WaitForSeconds(0.5f);
         scene1_sound_manager.EndPartyTransitionEvent();
+    }
+
+    IEnumerator disableAfterGrabEnd(Transform current, OVRGrabbable currentMemoryG)
+    {
+        while (currentMemoryG.isGrabbed)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        current.gameObject.SetActive(false);
     }
 
     IEnumerator enableBarObjects() {
