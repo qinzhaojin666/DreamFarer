@@ -17,6 +17,7 @@ public class Scene1SoundManager : MonoBehaviour {
     [EventRef] public string partyTransitionPath;
     [EventRef] public string fadeNoisePath;
 
+    private bool temp = false;
     public GameObject[] memoryObjects;
     public GameObject partyTransitionObject;
     public OVRGrabbable[] memoryGrabbers;
@@ -42,6 +43,15 @@ public class Scene1SoundManager : MonoBehaviour {
         ambienceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         ambienceInstance.release();
     }
+    IEnumerator disableAfterGrabEnd(int current, OVRGrabbable currentMemoryG)
+    {
+        while (currentMemoryG.isGrabbed)
+        {
+            yield return null;
+        }
+        yield return new WaitForSeconds(2f);
+        memoryObjects[current].SetActive(false);
+    }
 
     public void BeginMemorySound(int i) {
         RuntimeManager.PlayOneShotAttached(fadeNoisePath, memoryObjects[i]);
@@ -49,13 +59,17 @@ public class Scene1SoundManager : MonoBehaviour {
                                                   memoryObjects[i].transform,
                                                   memoryObjects[i].GetComponent<Rigidbody>());
         memoryInstances[i].start();
+        print("playing memory: " + i);
     }
 
     public void EnableNextObject()
     {
         if (currentMemory < numMemoryObjects) {
             EndMemorySound(currentMemory);
-            memoryObjects[currentMemory].SetActive(false);
+            //memoryObjects[currentMemory].SetActive(false);
+            bool beforePartyEvent = (currentMemory < numMemoryObjects);
+            OVRGrabbable currentMemoryGrabber = (beforePartyEvent ? memoryGrabbers[currentMemory] : partyTransitionGrabber);
+            StartCoroutine(disableAfterGrabEnd(currentMemory, currentMemoryGrabber));
 
             if (currentMemory+1 == numMemoryObjects) {
                 partyTransitionObject.SetActive(true);
@@ -97,18 +111,43 @@ public class Scene1SoundManager : MonoBehaviour {
         for (int i = 0; i < numMemoryObjects; i++) {
             memoryInstances[i] = RuntimeManager.CreateInstance(memoryPaths[i]);
             grabbedDistTargets[i] = 0.5f;
+            //RuntimeManager.PlayOneShotAttached(fadeNoisePath, memoryObjects[i]);
+            //RuntimeManager.AttachInstanceToGameObject(memoryInstances[i],
+            //                                          memoryObjects[i].transform,
+            //                                          memoryObjects[i].GetComponent<Rigidbody>());
         }
         ambienceInstance = RuntimeManager.CreateInstance(ambiencePath);
+
+
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera));
         BeginAmbience();
         partyTransitionInstance = RuntimeManager.CreateInstance(partyTransitionPath);
         partyTransitionInstance.set3DAttributes(RuntimeUtils.To3DAttributes(partyTransitionObject));
 
         BeginMemorySound(currentMemory);
+        StartCoroutine(waitfor());
     }
 
     private float getParameterFromDistance(float distance) {
         return Mathf.Min(1.0f, distance / maxMemoryDistance);
+    }
+
+    IEnumerator waitfor()
+    {
+        yield return new WaitForSeconds(10f);
+        temp = true;
+        yield return new WaitForSeconds(5f);    
+        temp = false;
+        yield return new WaitForSeconds(10f);
+        temp = true;
+        yield return new WaitForSeconds(5f);
+        temp = false;
+        yield return new WaitForSeconds(10f);
+        temp = true;
+        yield return new WaitForSeconds(5f);
+        temp = false;
+        yield return new WaitForSeconds(10f);
+
     }
 
     // Update is called once per frame
