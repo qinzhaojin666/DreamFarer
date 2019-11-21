@@ -29,6 +29,10 @@ public class Manager : MonoBehaviour {
             if (!child.gameObject.CompareTag("dontEnable"))
             {
                 child.gameObject.SetActive(true);
+            } else
+            {
+                child.gameObject.SetActive(false);
+
             }
         }
     }
@@ -54,24 +58,39 @@ public class Manager : MonoBehaviour {
         StartCoroutine(enableIslandObjects());
     }
 
-    IEnumerator disableAlleyObjects() {
+    //IEnumerator disableAlleyObjects(GameObject )
+    //{
+    //    while (.isGrabbed)
+    //    {
+    //        yield return null;
+    //    }
+    //    yield return new WaitForSeconds(2f);
+    //    memoryObjects[current].SetActive(false);
+    //}
+
+
+        IEnumerator disableAlleyObjects() {
         scene1_sound_manager.EndAllMemorySounds();
 
         foreach (Transform child in alleyObjects.transform) {
             yield return new WaitForSeconds(.1f);
-            //if (child.gameObject.CompareTag("popup"))
+            //if (child.gameObject.CompareTag("Respawn"))
             //{
-            //    print("popup found");
-            //    float count = 0;
-            //    while (count <= 45)
-            //    {
-            //        child.Rotate(new Vector3(0, 0, -2f));
-            //        //child.RotateAround( , new Vector3(-1f, 0, 0));
-            //        count += 2;
-            //        yield return new WaitForSeconds(.0001f);
-            //    }
+
             //}
-            child.gameObject.SetActive(false);
+                //{
+                //    print("popup found");
+                //    float count = 0;
+                //    while (count <= 45)
+                //    {
+                //        child.Rotate(new Vector3(0, 0, -2f));
+                //        //child.RotateAround( , new Vector3(-1f, 0, 0));
+                //        count += 2;
+                //        yield return new WaitForSeconds(.0001f);
+                //    }
+                //}
+                child.gameObject.SetActive(false);
+
         }
         startEnableBarObjects();
         scene1_sound_manager.EndAmbience();

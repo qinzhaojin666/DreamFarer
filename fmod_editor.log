@@ -7,14 +7,1139 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000019020B21258 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000019020B1FB38 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 121)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B184E18)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED19EAB0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED19EBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B1857D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA9208 : node = 0000018FED4E9640
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA9208.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B184E18)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E2510
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E2620
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B187ED8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA86978A8 : node = 0000018FED4E9640
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA86978A8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA86978A8
+[LOG] SoundI::getSubSound                      : sound 0000018FA86978A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B1857D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB03FDBC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FDCD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA86978A8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B184E18)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA9208 : node = 0000018FB75E2A10
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E2B20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA9208.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B1857D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB03FD300
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B184E18)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA8697038 : node = 0000018F84E8C6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA8697038
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018F84E8C7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA8697038
+[LOG] SoundI::getSubSound                      : sound 0000018FA8697038.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900B1857D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA8697398 : node = 0000018FA855FC90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA8697398
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA855FDA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA8697398
+[LOG] SoundI::getSubSound                      : sound 0000018FA8697398.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA8697038)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D952D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA86978A8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FED1A3560
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A3670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA8697398)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA9208 : node = 0000018FED4E9640
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9750
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA9208.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED1A3920
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A3A30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB03FD940
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FDA50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FB75E2650
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E2760
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FA855FC90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA855FDA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FB03FDE40
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FDF50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E28D0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E29E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='cityambience', format=2, channels=2, frequency=48000, lengthbytes=975744, lengthpcm=4025611, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627023.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA8697038 : node = 0000018FED19EAB0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA8697038
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED19EBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA8697038
+[LOG] SoundI::getSubSound                      : sound 0000018FA8697038.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D952D8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          : cityambience (0000018FB051E3F8)
+[LOG] SoundI::release                          :     cityambience (000001900B187518)
+[LOG] SoundI::release                          :     cityambience (0000018FA86982C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA8697398 : node = 0000018FED1A32E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA8697398
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A33F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA8697398
+[LOG] SoundI::getSubSound                      : sound 0000018FA8697398.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA8697038)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA86978A8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FA8697038 : node = 0000018FED5A5B80
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA8697038
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 0000018FA86978A8 : node = 0000018FED5B4270
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED5A5C90
+[LOG] SystemI::createSound                     :     add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 2000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='cityambience', format=2, channels=2, frequency=48000, lengthbytes=975744, lengthpcm=4025611, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.627023.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA8697038
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FA86978A8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED5B4380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FA86978A8
+[LOG] SoundI::getSubSound                      : sound 0000018FA8697038.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0000018FA86978A8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA8697398)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D93A78)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA86982C8)
+[LOG] SoundI::release                          : cityambience (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     cityambience (0000018FA7D95958)
+[LOG] SoundI::release                          :     cityambience (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED1A4AA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A4BB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FA86978A8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (000001900ACE6E18)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FA855FF10
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA8560020
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FA85602D0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA85603E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED19EAB0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED19EBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E2A10
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E2B20
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED19EAB0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED19EBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E2C90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E2DA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D93A78)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FED4E9A00
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9B10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E32D0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E33E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED5B4270
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED5B4380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018F84E8C6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018F84E8C7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95AF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED1A4AA0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A4BB0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB75E3190
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB75E32A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FA855FF10
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA8560020
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB03FD300
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018F84E8C6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018F84E8C7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95AF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED1A3A60
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A3B70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D93A78)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED1A45A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A46B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED1A2DE0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A2EF0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FB03FD300
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD410
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FA8560050
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA8560160
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FB03FD080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD190
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D93A78)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED4E9780
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9890
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FB03FD080
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD190
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FA855FC90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA855FDA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED1A45A0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED1A46B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA9208 : node = 0000018F84E8C6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018F84E8C7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA9208.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018FB03FD580
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD690
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FB03FD800
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FB03FD910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA98C8 : node = 0000018F84E8C6E0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018F84E8C7F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA98C8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA98C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92BD8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA9208 : node = 0000018FA855FC90
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA9208
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FA855FDA0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA9208
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA9208.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D93A78)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED19EAB0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED19EBC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D97018)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8CF8 : node = 0000018FED4E9780
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED4E9890
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8CF8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8CF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D91378)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SystemI::createSound                     : filename = C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000018FECCA8EA8 : node = 0000018FED5B44F0
+[LOG] SystemI::createSound                     : add node to async list : head = 000001900B183A48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SystemI::createSoundInternal             :     Create name='C:\Users\Admin\Documents\DreamFarer\DreamFarer\FMOD\DreamfarerSoundTest\Build\Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5558624
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36608
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000018FED5B4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='MovingMemoryV2', format=2, channels=2, frequency=48000, lengthbytes=296384, lengthpcm=1165920, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.000000.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000018FECCA8EA8
+[LOG] SoundI::getSubSound                      : sound 0000018FECCA8EA8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8CF8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D95958)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA9208)
+[LOG] SoundI::release                          : cityambience (0000018FA8697038)
+[LOG] SoundI::release                          :     cityambience (0000018FA7D952D8)
+[LOG] SoundI::release                          :     cityambience (000001900ACE6C68)
+[LOG] SoundI::release                          : MovingMemoryV2 (0000018FECCA8EA8)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FA7D92898)
+[LOG] SoundI::release                          :     MovingMemoryV2 (0000018FECCA98C8)
+[LOG] SoundI::release                          :  (0000018FAFF8D5E8)
+[LOG] SoundI::release                          :     fadenoise (000001900B187038)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
