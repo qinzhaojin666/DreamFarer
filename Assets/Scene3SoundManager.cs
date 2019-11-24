@@ -94,10 +94,9 @@ public class Scene3SoundManager : MonoBehaviour {
 
     }
 
-    public void endScene()
+    public void FadeToDaytime()
     {
         StartCoroutine(FadeLight(sun, 0f, 1f, 5f));
-
     }
 
     // Update is called once per frame
@@ -105,6 +104,7 @@ public class Scene3SoundManager : MonoBehaviour {
         if (phoneGrabber.isGrabbed && ringing) {
             StopRing();
             StartCall();
+            FadeToDaytime();
         }
 
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera.transform));
@@ -112,7 +112,6 @@ public class Scene3SoundManager : MonoBehaviour {
         if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED && callDone)
         {
             StopCall();
-            endScene();
         }
     }
 }
