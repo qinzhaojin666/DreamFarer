@@ -16,15 +16,32 @@ MonoBehaviour:
   guid: 4deb6c17fa7cb24a820d6acb08da6850
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -1989979108900890278}
+  - {fileID: -7097842532253013034}
   MinDistance: 0
   MaxDistance: 5.2000003
   Length: 19235
+--- !u!114 &-8641991240360520734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WeatherMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-7652177230580930748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +130,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 5595232
+  Exists: 0
+--- !u!114 &-7097842532253013034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/WeatherMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &-6886371408807789886
 MonoBehaviour:
@@ -130,7 +164,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-6592190534259753463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +181,7 @@ MonoBehaviour:
   guid: 196f3f87f0d92b47b854e46ea18de9c2
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -256,16 +290,33 @@ MonoBehaviour:
   guid: 1000923e7a378a4d88d7bcb399fdc327
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -6886371408807789886}
-  - {fileID: 2339401309761922051}
+  - {fileID: 6244776572825460738}
+  - {fileID: 5023224643781052041}
   MinDistance: 1
   MaxDistance: 20
   Length: 16500
+--- !u!114 &-3990971113287682617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/phase
+  m_EditorClassIdentifier: 
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
 --- !u!114 &-3769953515928847589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,12 +333,12 @@ MonoBehaviour:
   guid: 52dc11fcd862424ead77b1cbd639e937
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -730818934435894631}
+  - {fileID: 2602592101759748546}
   MinDistance: 0
   MaxDistance: 4.4
   Length: 35000
@@ -307,14 +358,15 @@ MonoBehaviour:
   guid: 77f1b3aef7f518469e5f98a6751b4fc1
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 5144989749422157286}
   MinDistance: 1
   MaxDistance: 20
-  Length: 103000
+  Length: 102000
 --- !u!114 &-3499106684572048014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +383,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-2922127899869392410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +421,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1332
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1989979108900890278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +438,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1870867356186621966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,12 +455,12 @@ MonoBehaviour:
   guid: 8dc42578c6295d4ba20598889c871227
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -3499106684572048014}
+  - {fileID: -1431580437790123122}
   MinDistance: 1
   MaxDistance: 20
   Length: 84500
@@ -433,6 +485,23 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1332
   Exists: 1
+--- !u!114 &-1852209673376825712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-1804602958266231980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +519,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-1431580437790123122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-846522895443347587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,7 +552,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-730818934435894631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +569,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-307162320128597004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -514,8 +600,8 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -2384789699280756785}
-  - {fileID: -7253963847436004498}
+  - {fileID: 5624394562932726513}
+  - {fileID: 6181119234184123387}
   EditorEvents:
   - {fileID: -4342109678617270237}
   - {fileID: -6592190534259753463}
@@ -533,11 +619,28 @@ MonoBehaviour:
   - {fileID: 4079310969315179397}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   StringsBanks:
-  - {fileID: -2384789699280756785}
-  stringsBankWriteTime: 637098654081888384
+  - {fileID: 5624394562932726513}
+  stringsBankWriteTime: 637102025486719074
   cacheVersion: 3
+--- !u!114 &505506933428919097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MovingMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &1606388521363553702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,14 +699,14 @@ MonoBehaviour:
   guid: a68bfb5f57c90045ae9d78411059747c
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 8640
 --- !u!114 &2339401309761922051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +723,7 @@ MonoBehaviour:
   Min: 1
   Max: 4
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &2498203615993919227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +740,7 @@ MonoBehaviour:
   guid: a29f12e3c1bb5e44b1dd49a340db7998
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -645,6 +748,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 77070
+--- !u!114 &2602592101759748546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JobMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &3158536796651822174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,15 +819,32 @@ MonoBehaviour:
   guid: 4f2de7065113aa4aa877974eb2b4d81b
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -846522895443347587}
+  - {fileID: 6051549365187518957}
   MinDistance: 0
   MaxDistance: 5.4
   Length: 24290
+--- !u!114 &3936181304625067688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &4079310969315179397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,7 +861,7 @@ MonoBehaviour:
   guid: d3e3e9365103a9499ecbae2db9fee595
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -753,6 +890,116 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1332
   Exists: 0
+--- !u!114 &5023224643781052041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/phase
+  m_EditorClassIdentifier: 
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &5144989749422157286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/phase
+  m_EditorClassIdentifier: 
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 1
+--- !u!114 &5624394562932726513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
+    Bank.strings.bank
+  SubDir: 
+  lastModified: 637102025486719074
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1332
+  Exists: 1
+--- !u!114 &6051549365187518957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MovingMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &6181119234184123387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/erike/OneDrive/Documents/GitHub/DreamFarer/FMOD/DreamfarerSoundTest/Build/Desktop/Master
+    Bank.bank
+  SubDir: 
+  lastModified: 637102025486689158
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5833152
+  Exists: 1
+--- !u!114 &6244776572825460738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &6289012507233383561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -769,7 +1016,7 @@ MonoBehaviour:
   guid: ac2b9ae7b57baa45b2261840beaaebf3
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -793,7 +1040,7 @@ MonoBehaviour:
   guid: 90aec667722cda4b8429a1c7d5b652de
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -851,14 +1098,31 @@ MonoBehaviour:
   guid: 95c45b62e05cd7439dc359a153232692
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 13500
+  Length: 20750
+--- !u!114 &7419053076189733744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/JobMemory/GrabbedDistance
+  m_EditorClassIdentifier: 
+  Name: GrabbedDistance
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7887471618883341811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,7 +1173,7 @@ MonoBehaviour:
   guid: 58ef20bb71fe7a4d97e0f0beb501ee37
   Banks:
   - {fileID: 2155202961601401144}
-  - {fileID: -7253963847436004498}
+  - {fileID: 6181119234184123387}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -917,6 +1181,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8752
+--- !u!114 &8570503365363644670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RestaurantAmbience/phase
+  m_EditorClassIdentifier: 
+  Name: phase
+  Min: 1
+  Max: 4
+  Default: 1
+  Exists: 0
 --- !u!114 &8575534105140908619
 MonoBehaviour:
   m_ObjectHideFlags: 0
