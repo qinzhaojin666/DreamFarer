@@ -88,6 +88,8 @@ public class Scene3SoundManager : MonoBehaviour {
             print("yo");
             yield return null;
         }
+        RenderSettings.skybox = endSky;
+
         yield return null;
 
     }
@@ -95,7 +97,6 @@ public class Scene3SoundManager : MonoBehaviour {
     public void endScene()
     {
         StartCoroutine(FadeLight(sun, 0f, 1f, 5f));
-        RenderSettings.skybox = endSky;
 
     }
 
