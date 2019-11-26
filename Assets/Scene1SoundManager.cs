@@ -12,27 +12,32 @@ public class Scene1SoundManager : MonoBehaviour {
     // Delta = max change in parameter per second (allows for a smooth transition)
     public float delta = 0.75f;
 
+    // FMOD sound event paths
     [EventRef] public string[] memoryPaths;
     [EventRef] public string ambiencePath;
     [EventRef] public string partyTransitionPath;
     [EventRef] public string fadeNoisePath;
 
-    private bool temp = false;
+    // Game objects and grabbers for sound events
     public GameObject[] memoryObjects;
     public GameObject partyTransitionObject;
     public OVRGrabbable[] memoryGrabbers;
     public OVRGrabbable partyTransitionGrabber;
 
+    // Player camera game object
     public GameObject playerCamera;
+
+    // Max radius for memory events' area of sound
     public float maxMemoryDistance = 1;
 
+    // FMOD sound event instances
     private FMOD.Studio.EventInstance[] memoryInstances = new FMOD.Studio.EventInstance[numMemoryObjects];
     private FMOD.Studio.EventInstance ambienceInstance;
     public FMOD.Studio.EventInstance partyTransitionInstance;
-    private float[] grabbedDistTargets = new float[numMemoryObjects];
 
+    // Other private state variables
     private bool partyTransitionInitiated;
-
+    private bool temp = false;
     private int currentMemory = 0;
 
     public void BeginAmbience() {
@@ -43,7 +48,10 @@ public class Scene1SoundManager : MonoBehaviour {
         ambienceInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         ambienceInstance.release();
     }
-    IEnumerator disableAfterGrabEnd(int current, OVRGrabbable currentMemoryG)
+
+    // Disables object only AFTER the user is done grabbing it (since disabling an
+    //   object while grabbing it breaks grabbing for that hand)
+    IEnumerator DisableAfterGrabEnd(int current, OVRGrabbable currentMemoryG)
     {
         while (currentMemoryG.isGrabbed)
         {
@@ -66,18 +74,17 @@ public class Scene1SoundManager : MonoBehaviour {
     {
         if (currentMemory < numMemoryObjects) {
             EndMemorySound(currentMemory);
-            //memoryObjects[currentMemory].SetActive(false);
             bool beforePartyEvent = (currentMemory < numMemoryObjects);
             OVRGrabbable currentMemoryGrabber = (beforePartyEvent ? memoryGrabbers[currentMemory] : partyTransitionGrabber);
-            StartCoroutine(disableAfterGrabEnd(currentMemory, currentMemoryGrabber));
+            StartCoroutine(DisableAfterGrabEnd(currentMemory, currentMemoryGrabber));
 
-            if (currentMemory+1 == numMemoryObjects) {
+            if (currentMemory + 1 == numMemoryObjects) {
                 partyTransitionObject.SetActive(true);
                 BeginPartyTransitionEvent();
             }
             else {
-                memoryObjects[currentMemory+1].SetActive(true);
-                BeginMemorySound(currentMemory+1);
+                memoryObjects[currentMemory + 1].SetActive(true);
+                BeginMemorySound(currentMemory + 1);
             }
             currentMemory++;
         }
@@ -107,20 +114,17 @@ public class Scene1SoundManager : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+
         partyTransitionInitiated = false;
+
+        // Initialize sound events from paths 
         for (int i = 0; i < numMemoryObjects; i++) {
             memoryInstances[i] = RuntimeManager.CreateInstance(memoryPaths[i]);
-            grabbedDistTargets[i] = 0.5f;
-            //RuntimeManager.PlayOneShotAttached(fadeNoisePath, memoryObjects[i]);
-            //RuntimeManager.AttachInstanceToGameObject(memoryInstances[i],
-            //                                          memoryObjects[i].transform,
-            //                                          memoryObjects[i].GetComponent<Rigidbody>());
         }
         ambienceInstance = RuntimeManager.CreateInstance(ambiencePath);
-
-
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera));
         BeginAmbience();
+
         partyTransitionInstance = RuntimeManager.CreateInstance(partyTransitionPath);
         partyTransitionInstance.set3DAttributes(RuntimeUtils.To3DAttributes(partyTransitionObject));
 
@@ -128,6 +132,7 @@ public class Scene1SoundManager : MonoBehaviour {
         StartCoroutine(waitfor());
     }
 
+    // Extracts a grabbedDistance parameter value from a raw distance value
     private float getParameterFromDistance(float distance) {
         return Mathf.Min(1.0f, distance / maxMemoryDistance);
     }
@@ -152,15 +157,24 @@ public class Scene1SoundManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        // If photo is being grabbed, start party transition
         if (partyTransitionGrabber.isGrabbed) {
             partyTransitionInitiated = true;
         }
 
+        // Get current memory sound event instance
         bool beforePartyEvent = (currentMemory < numMemoryObjects);
-        FMOD.Studio.EventInstance currentMemoryInstance = (beforePartyEvent ? memoryInstances[currentMemory] : partyTransitionInstance);
-        OVRGrabbable currentMemoryGrabber = (beforePartyEvent ? memoryGrabbers[currentMemory] : partyTransitionGrabber);
-        Vector3 currentMemoryPosition = (beforePartyEvent ? memoryObjects[currentMemory].transform.position : partyTransitionObject.transform.position);
+        FMOD.Studio.EventInstance currentMemoryInstance = (beforePartyEvent ?
+                                                           memoryInstances[currentMemory] :
+                                                           partyTransitionInstance);
+        OVRGrabbable currentMemoryGrabber = (beforePartyEvent ?
+                                             memoryGrabbers[currentMemory] :
+                                             partyTransitionGrabber);
+        Vector3 currentMemoryPosition = (beforePartyEvent ? 
+                                         memoryObjects[currentMemory].transform.position :
+                                         partyTransitionObject.transform.position);
 
+        // Figure out what the parameter target is based on distance & whether object is grabbed
         currentMemoryInstance.getParameterByName(grabbedDistName, out float grabbedDistance);
         ambienceInstance.getParameterByName(grabbedDistName, out float ambientGrabbedDistance);
         float grabbedDistTarget;
@@ -168,13 +182,22 @@ public class Scene1SoundManager : MonoBehaviour {
             grabbedDistTarget = 0;
         }
         else {
-            grabbedDistTarget = getParameterFromDistance(Vector3.Distance(currentMemoryPosition, playerCamera.transform.position));
+            grabbedDistTarget = getParameterFromDistance(Vector3.Distance(currentMemoryPosition,
+                                                                          playerCamera.transform.position));
         }
-
+        
+        // Set the ambience & memory sound's parameters based on the target value
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera));
-        ambienceInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(ambientGrabbedDistance, grabbedDistTarget, delta * Time.deltaTime));
-        currentMemoryInstance.setParameterByName(grabbedDistName, Mathf.MoveTowards(grabbedDistance, grabbedDistTarget, delta * Time.deltaTime));
+        ambienceInstance.setParameterByName(grabbedDistName,
+                                            Mathf.MoveTowards(ambientGrabbedDistance,
+                                                              grabbedDistTarget,
+                                                              delta * Time.deltaTime));
+        currentMemoryInstance.setParameterByName(grabbedDistName,
+                                                 Mathf.MoveTowards(grabbedDistance,
+                                                                   grabbedDistTarget,
+                                                                   delta * Time.deltaTime));
 
+        // If the current memory sound event is done, move on to the next one
         currentMemoryInstance.getPlaybackState(out FMOD.Studio.PLAYBACK_STATE state);
         if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED) {
             EnableNextObject();

@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour {
 
+    // Game object sets for each scene
     public GameObject alleyObjects;
     public GameObject barObjects;
     public GameObject islandObjects;
 
+    // Sound events managers for each scene
     private Scene1SoundManager scene1_sound_manager;
     private Scene2SoundManager scene2_sound_manager;
     private Scene3SoundManager scene3_sound_manager;
@@ -27,16 +29,14 @@ public class Manager : MonoBehaviour {
             child.gameObject.SetActive(false);
         }
         foreach (Transform child in alleyObjects.transform) {
-            if (!child.gameObject.CompareTag("dontEnable"))
-            {
+            if (!child.gameObject.CompareTag("dontEnable")) {
                 child.gameObject.SetActive(true);
-            } else
-            {
+            }
+            else {
                 child.gameObject.SetActive(false);
-
             }
         }
-
+        // Uncomment this line to start the test routine
         //StartCoroutine(test());
     }
 
@@ -61,56 +61,26 @@ public class Manager : MonoBehaviour {
         StartCoroutine(enableIslandObjects());
     }
 
-    //IEnumerator disableAlleyObjects(GameObject )
-    //{
-    //    while (.isGrabbed)
-    //    {
-    //        yield return null;
-    //    }
-    //    yield return new WaitForSeconds(2f);
-    //    memoryObjects[current].SetActive(false);
-    //}
 
+    IEnumerator disableAlleyObjects() {
 
-        IEnumerator disableAlleyObjects() {
         scene1_sound_manager.EndAllMemorySounds();
 
         foreach (Transform child in alleyObjects.transform) {
             yield return new WaitForSeconds(.1f);
-            //if (child.gameObject.CompareTag("Respawn"))
-            //{
-
-            //}
-            //{
-            //    print("popup found");
-            //    float count = 0;
-            //    while (count <= 45)
-            //    {
-            //        child.Rotate(new Vector3(0, 0, -2f));
-            //        //child.RotateAround( , new Vector3(-1f, 0, 0));
-            //        count += 2;
-            //        yield return new WaitForSeconds(.0001f);
-            //    }
-            //}
-            if (!child.gameObject.CompareTag("dontEnable"))
-            {
-                //child.gameObject.SetActive(false);
+            
+            if (!child.gameObject.CompareTag("dontEnable")) {
                 StartCoroutine(fadeInAndOut(child.gameObject, false, 2f, true));
-
             }
-            else if (child.gameObject.activeInHierarchy)
-            {
+            else if (child.gameObject.activeInHierarchy) {
                 OVRGrabbable g = child.GetComponent<OVRGrabbable>();
-                if (g.isGrabbed)
-                {
+                if (g.isGrabbed) {
                     StartCoroutine(disableAfterGrabEnd(child, g));
                 }
-                else
-                {
+                else {
                     child.gameObject.SetActive(false);
                 }
             }
-
         }
         startEnableBarObjects();
         scene1_sound_manager.EndAmbience();
@@ -118,10 +88,8 @@ public class Manager : MonoBehaviour {
         scene1_sound_manager.EndPartyTransitionEvent();
     }
 
-    IEnumerator disableAfterGrabEnd(Transform current, OVRGrabbable currentMemoryG)
-    {
-        while (currentMemoryG.isGrabbed)
-        {
+    IEnumerator disableAfterGrabEnd(Transform current, OVRGrabbable currentMemoryG) {
+        while (currentMemoryG.isGrabbed) {
             yield return null;
         }
         yield return new WaitForSeconds(2f);
@@ -134,19 +102,11 @@ public class Manager : MonoBehaviour {
             Transform child = barObjects.transform.GetChild(i);
             yield return new WaitForSeconds(.01f);
 
-            if (!child.gameObject.CompareTag("dontEnable"))
-            {
+            if (!child.gameObject.CompareTag("dontEnable")) {
                 child.gameObject.SetActive(true);
-                //StartCoroutine(fadeInAndOut(child.gameObject, true, 2f, false));
-
             }
         }
-        //foreach (Transform child in barObjects.transform)
-        //{
-        //    yield return new WaitForSeconds(.1f);
 
-        //    child.gameObject.SetActive(true);
-        //}
         scene2_sound_manager.StartAmbience();
         yield return new WaitForSeconds(3f);
         scene2_sound_manager.StartConverstaions();
@@ -156,10 +116,7 @@ public class Manager : MonoBehaviour {
     IEnumerator disableBarObjects() {
         foreach (Transform child in barObjects.transform) {
             yield return new WaitForSeconds(.01f);
-
-
             StartCoroutine(fadeInAndOut(child.gameObject, false, 2f, true));
-
         }
         startEnableIslandObjects();
     }
@@ -167,16 +124,12 @@ public class Manager : MonoBehaviour {
     IEnumerator enableIslandObjects() {
         foreach (Transform child in islandObjects.transform) {
             yield return new WaitForSeconds(.1f);
-            if (!child.gameObject.CompareTag("dontEnable"))
-            {
+            if (!child.gameObject.CompareTag("dontEnable")) {
                 child.gameObject.SetActive(true);
-                //StartCoroutine(fadeInAndOut(child.gameObject, true, 2f, false));
-
             }
         }
         scene3_sound_manager.StartAmbience();
         yield return new WaitForSeconds(10f);
-        // TODO: Make phone booth appear here
         scene3_sound_manager.StartRing();
     }
 
@@ -184,23 +137,19 @@ public class Manager : MonoBehaviour {
     IEnumerator test() {
         yield return new WaitForSeconds(5);
         StartCoroutine(disableAlleyObjects());
-
     }
 
 
-    IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration, bool isVanish)
-    {
+    IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration, bool isVanish) {
         float counter = 0f;
 
         //Set Values depending on if fadeIn or fadeOut
         float a, b;
-        if (fadeIn)
-        {
+        if (fadeIn) {
             a = 0;
             b = 1;
         }
-        else
-        {
+        else {
             a = 1;
             b = 0;
         }
@@ -215,33 +164,28 @@ public class Manager : MonoBehaviour {
         Text tempText = objectToFade.GetComponent<Text>();
 
         //Check if this is a Sprite
-        if (tempSPRenderer != null)
-        {
+        if (tempSPRenderer != null) {
             currentColor = tempSPRenderer.color;
             mode = 0;
         }
         //Check if Image
-        else if (tempImage != null)
-        {
+        else if (tempImage != null) {
             currentColor = tempImage.color;
             mode = 1;
         }
         //Check if RawImage
-        else if (tempRawImage != null)
-        {
+        else if (tempRawImage != null) {
             currentColor = tempRawImage.color;
             mode = 2;
         }
         //Check if Text 
-        else if (tempText != null)
-        {
+        else if (tempText != null) {
             currentColor = tempText.color;
             mode = 3;
         }
 
         //Check if 3D Object
-        else if (tempRenderer != null)
-        {
+        else if (tempRenderer != null) {
             currentColor = tempRenderer.material.color;
             mode = 4;
 
@@ -255,22 +199,18 @@ public class Manager : MonoBehaviour {
             tempRenderer.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
             tempRenderer.material.renderQueue = 3000;
         }
-        else
-        {
-            if (isVanish)
-            {
+        else {
+            if (isVanish) {
                 objectToFade.transform.gameObject.SetActive(false);
             }
             yield break;
         }
 
-        while (counter < duration)
-        {
+        while (counter < duration) {
             counter += Time.deltaTime;
             float alpha = Mathf.Lerp(a, b, counter / duration);
 
-            switch (mode)
-            {
+            switch (mode) {
                 case 0:
                     tempSPRenderer.color = new Color(currentColor.r, currentColor.g, currentColor.b, alpha);
                     break;
@@ -290,8 +230,7 @@ public class Manager : MonoBehaviour {
            
             yield return null;
         }
-        if (isVanish)
-        {
+        if (isVanish) {
             objectToFade.transform.gameObject.SetActive(false);
         }
     }

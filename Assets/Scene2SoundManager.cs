@@ -7,11 +7,13 @@ using UnityEngine.UI;
 
 public class Scene2SoundManager : MonoBehaviour {
 
+    // Private state variables
     private float time;
     private bool started;
 
     public Manager manager;
 
+    // Timing for events
     private List<float> eventTimes = new List<float>() {
         0.216f,0.64f,1.226f,2.002f,2.003f,2.678f,2.976f,4.411f,4.448f,5.891f,5.891f,5.891f,6.332f,6.332f,
         6.84f, 8.342f,8.459f,8.459f, 10.213f,10.213f,10.673f,11.264f,11.724f,12.36f,12.752f,13.117f,15.586f,
@@ -20,19 +22,30 @@ public class Scene2SoundManager : MonoBehaviour {
         38.338f,38.649f,39.231f,41.012f,41.45f, 41.892f,43.655f,44.421f,46.117f,47.005f,47.248f,48.701f,
         48.701f,50.739f,54.135f,54.689f,58.91f, 59.176f,60.231f,63.027f,65.611f,65.611f, 70f
     };
+    // Event codes for events
+    //   0,1,2 = toggle light of person 1,2,3 (respectively)
+    //   3,4,5 = change clothing or leave for person 1,2,3 (respectively)
+    //   anything negative = set phase parameter of ambience to absolute value
     private List<int> eventCodes = new List<int>() {
         0, 0, 1, 1, 2, 2, 0, 0, 1, 0, 1, 2, 0, 2, 1, 1, 0, 2, 0, 2, 2, 2, 1, 1, 3, 0, 0, -1, 1, 1, 2,
         2, 0, 0, 1, 2, 1, 2, 0, -2, 0, 3, 2, 2, 1, 1, 2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 5, 2, 2, 2, 2, 2, -3,
         2, 5, 1, 1, 1, 1, 4, 1, -4, 1, 4, 100
     };
 
+    // Queue for actual event storage
     private Queue<KeyValuePair<float, int>> events;
+    // State values for people (for which outfit to show)
     private int[] persons_stage;
+    // Actual person game objects
     public GameObject[] people;
+    // State for whether lights are toggled
     private bool[] light_bit = { false, false, false };
+    // Player camera object
     public GameObject playerListener;
+    // Objects for background people
     public GameObject[] peopleGroups;
 
+    // FMOD sound event paths
     [EventRef] public string[] personSoundPaths;
     [EventRef] public string backingTrackPath;
     [EventRef] public string ambiencePath;
@@ -43,6 +56,7 @@ public class Scene2SoundManager : MonoBehaviour {
     // Target for phase parameter (used for smooth fades)
     private float phaseTarget = 1f;
 
+    // FMOD sound event instances
     private FMOD.Studio.EventInstance[] personSoundInstances;
     private FMOD.Studio.EventInstance backingTrackInstance;
     private FMOD.Studio.EventInstance ambienceInstance;
@@ -139,7 +153,6 @@ public class Scene2SoundManager : MonoBehaviour {
         if (persons_stage[person_index] == 0) {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
-            //person.transform.GetChild(0).gameObject.SetActive(false);
             StartCoroutine(FadeOut3D(person.transform.GetChild(0).transform, 0, true, 2));
             person.transform.GetChild(1).gameObject.SetActive(true);
 
@@ -148,7 +161,6 @@ public class Scene2SoundManager : MonoBehaviour {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
             StartCoroutine(FadeOut3D(person.transform.GetChild(1).transform,0, true, 3));
-            //person.transform.GetChild(1).gameObject.SetActive(false);
         }
 
     }
@@ -160,65 +172,42 @@ public class Scene2SoundManager : MonoBehaviour {
             yield return new WaitForSeconds(5f);
             foreach (Transform child in peopleGroups[i-1].transform)
             {
-                //yield return new WaitForSeconds(.01f);
-
-                //child.gameObject.SetActive(true);
-                //StartCoroutine(FadeOut3D(child, 1, true, 2));
                 StartCoroutine(fadeInAndOut(child.gameObject, false, 2f));
 
             }
-            //peopleGroups[i - 1].SetActive(false);
             peopleGroups[i].SetActive(true);
             foreach (Transform child in peopleGroups[i].transform)
             {
-                //yield return new WaitForSeconds(.01f);
-
-                //child.gameObject.SetActive(true);
-                //StartCoroutine(FadeOut3D(child, 1, true, 2));
                 StartCoroutine(fadeInAndOut(child.gameObject, true, 2f));
-
             }
         }
     }
 
     private IEnumerator PerformAction(int e) {
         if (e < 0) {
-            // this is the parameter case
+            // Set ambience parameter
             SetAmbienceParameter(getPhaseFromIntCode(e));
         }
         else if (e < numPeople) {
-            // this is the toggle light case
+            // Toggle light of person e
             GameObject person = people[e];
-            //foreach (Transform child in person.transform)
-            //{
-            //    if (child.tag == "light")
-
-            //}
-            if (!light_bit[e])
-            {
-            //person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
-
+            if (!light_bit[e]) {
                 StartCoroutine(FadeLight(person.transform.GetChild(2).GetComponent<Light>(), 0f, 2f, 0.2f));
                 light_bit[e] = !light_bit[e];
-            } else
-            {
+            }
+            else {
                 StartCoroutine(FadeLight(person.transform.GetChild(2).GetComponent<Light>(), 2f, 0f, 0.2f));
                 light_bit[e] = !light_bit[e];
             }
-            //person.transform.GetChild(2).gameObject.SetActive(!person.transform.GetChild(2).gameObject.activeInHierarchy);
         }
         else if (e < 2*numPeople) {
-            // this is the change/leave stage
-            //GameObject person = people[e % numPeople];
+            // Advance state of person e % numPeople
             movePersonsStage(e % numPeople);
-
-            // go to the next stage
         }
         else {
             manager.startDisableBarObjects();
         }
         yield return null;
-
     }
 
     IEnumerator fadeInAndOut(GameObject objectToFade, bool fadeIn, float duration)
@@ -227,13 +216,11 @@ public class Scene2SoundManager : MonoBehaviour {
 
         //Set Values depending on if fadeIn or fadeOut
         float a, b;
-        if (fadeIn)
-        {
+        if (fadeIn) {
             a = 0;
             b = 1;
         }
-        else
-        {
+        else {
             a = 1;
             b = 0;
         }
@@ -248,33 +235,28 @@ public class Scene2SoundManager : MonoBehaviour {
         Text tempText = objectToFade.GetComponent<Text>();
 
         //Check if this is a Sprite
-        if (tempSPRenderer != null)
-        {
+        if (tempSPRenderer != null) {
             currentColor = tempSPRenderer.color;
             mode = 0;
         }
         //Check if Image
-        else if (tempImage != null)
-        {
+        else if (tempImage != null) {
             currentColor = tempImage.color;
             mode = 1;
         }
         //Check if RawImage
-        else if (tempRawImage != null)
-        {
+        else if (tempRawImage != null) {
             currentColor = tempRawImage.color;
             mode = 2;
         }
         //Check if Text 
-        else if (tempText != null)
-        {
+        else if (tempText != null) {
             currentColor = tempText.color;
             mode = 3;
         }
 
         //Check if 3D Object
-        else if (tempRenderer != null)
-        {
+        else if (tempRenderer != null) {
             currentColor = tempRenderer.material.color;
             mode = 4;
 
@@ -288,18 +270,15 @@ public class Scene2SoundManager : MonoBehaviour {
             tempRenderer.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
             tempRenderer.material.renderQueue = 3000;
         }
-        else
-        {
+        else {
             yield break;
         }
 
-        while (counter < duration)
-        {
+        while (counter < duration) {
             counter += Time.deltaTime;
             float alpha = Mathf.Lerp(a, b, counter / duration);
 
-            switch (mode)
-            {
+            switch (mode) {
                 case 0:
                     tempSPRenderer.color = new Color(currentColor.r, currentColor.g, currentColor.b, alpha);
                     break;
@@ -319,16 +298,13 @@ public class Scene2SoundManager : MonoBehaviour {
             yield return null;
         }
     }
-    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime)
-    {
+    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime) {
         float t = 0.0f;
 
-        while (t < fadeTime)
-        {
+        while (t < fadeTime) {
             t += Time.deltaTime;
 
             l.intensity = Mathf.Lerp(fadeStart, fadeEnd, t / fadeTime);
-            //print("yo");
             yield return null;
         }
         yield return null;

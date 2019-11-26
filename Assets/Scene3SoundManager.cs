@@ -6,24 +6,29 @@ using FMODUnity;
 
 public class Scene3SoundManager : MonoBehaviour {
 
+    // FMOD sound event paths
     [EventRef] public string ambiencePath;
     [EventRef] public string ringPath;
     [EventRef] public string callPath;
-
+    
+    // ending skybox
     public Material endSky;
 
+    // Game objects and lights
     public GameObject playerCamera;
     public GameObject phone;
     public GameObject phoneBooth;
     public Light sun;
-    private bool callDone = false;
+    public OVRGrabbable phoneGrabber;
 
+    // FMOD sound event instances
     private FMOD.Studio.EventInstance ambienceInstance;
     private FMOD.Studio.EventInstance ringInstance;
     private FMOD.Studio.EventInstance callInstance;
 
-    public OVRGrabbable phoneGrabber;
+    // private state variables
     private bool ringing = false;
+    private bool callDone = false;
 
     private void StartSoundEvent(FMOD.Studio.EventInstance instance) {
         instance.start();
@@ -76,16 +81,13 @@ public class Scene3SoundManager : MonoBehaviour {
     }
 
 
-    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime)
-    {
+    IEnumerator FadeLight(Light l, float fadeStart, float fadeEnd, float fadeTime) {
         float t = 0.0f;
 
-        while (t < fadeTime)
-        {
+        while (t < fadeTime) {
             t += Time.deltaTime;
 
             l.intensity = Mathf.Lerp(fadeStart, fadeEnd, t / fadeTime);
-            print("yo");
             yield return null;
         }
         RenderSettings.skybox = endSky;
@@ -94,8 +96,7 @@ public class Scene3SoundManager : MonoBehaviour {
 
     }
 
-    public void FadeToDaytime()
-    {
+    public void FadeToDaytime() {
         StartCoroutine(FadeLight(sun, 0f, 1f, 5f));
     }
 
@@ -109,8 +110,7 @@ public class Scene3SoundManager : MonoBehaviour {
 
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera.transform));
         callInstance.getPlaybackState(out FMOD.Studio.PLAYBACK_STATE state);
-        if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED && callDone)
-        {
+        if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED && callDone) {
             StopCall();
         }
     }
