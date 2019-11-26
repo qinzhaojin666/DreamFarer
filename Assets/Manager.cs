@@ -61,7 +61,6 @@ public class Manager : MonoBehaviour {
         StartCoroutine(enableIslandObjects());
     }
 
-
     IEnumerator disableAlleyObjects() {
 
         scene1_sound_manager.EndAllMemorySounds();

@@ -49,6 +49,7 @@ public class Scene2SoundManager : MonoBehaviour {
     [EventRef] public string[] personSoundPaths;
     [EventRef] public string backingTrackPath;
     [EventRef] public string ambiencePath;
+    [EventRef] public string walkAwayPath;
 
     // Max delta for phase parameter per second (used for smooth fades)
     public float phaseDelta = 1f;
@@ -160,9 +161,9 @@ public class Scene2SoundManager : MonoBehaviour {
         else if (persons_stage[person_index] == 1) {
             persons_stage[person_index]++;
             GameObject person = people[person_index];
+            RuntimeManager.PlayOneShotAttached(walkAwayPath, person);
             StartCoroutine(FadeOut3D(person.transform.GetChild(1).transform,0, true, 3));
         }
-
     }
 
     private IEnumerator changeBackground()
@@ -173,7 +174,6 @@ public class Scene2SoundManager : MonoBehaviour {
             foreach (Transform child in peopleGroups[i-1].transform)
             {
                 StartCoroutine(fadeInAndOut(child.gameObject, false, 2f));
-
             }
             peopleGroups[i].SetActive(true);
             foreach (Transform child in peopleGroups[i].transform)
