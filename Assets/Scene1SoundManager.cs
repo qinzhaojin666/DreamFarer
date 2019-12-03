@@ -17,6 +17,7 @@ public class Scene1SoundManager : MonoBehaviour {
     [EventRef] public string ambiencePath;
     [EventRef] public string partyTransitionPath;
     [EventRef] public string fadeNoisePath;
+    [EventRef] public string startingCallPath;
 
     // Game objects and grabbers for sound events
     public GameObject[] memoryObjects;
@@ -33,6 +34,7 @@ public class Scene1SoundManager : MonoBehaviour {
     // FMOD sound event instances
     private FMOD.Studio.EventInstance[] memoryInstances = new FMOD.Studio.EventInstance[numMemoryObjects];
     private FMOD.Studio.EventInstance ambienceInstance;
+    private FMOD.Studio.EventInstance startingCallInstance;
     public FMOD.Studio.EventInstance partyTransitionInstance;
 
     // Other private state variables
@@ -124,6 +126,9 @@ public class Scene1SoundManager : MonoBehaviour {
         ambienceInstance = RuntimeManager.CreateInstance(ambiencePath);
         ambienceInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera));
         BeginAmbience();
+
+        startingCallInstance = RuntimeManager.CreateInstance(startingCallPath);
+        startingCallInstance.set3DAttributes(RuntimeUtils.To3DAttributes(playerCamera));
 
         partyTransitionInstance = RuntimeManager.CreateInstance(partyTransitionPath);
         partyTransitionInstance.set3DAttributes(RuntimeUtils.To3DAttributes(partyTransitionObject));

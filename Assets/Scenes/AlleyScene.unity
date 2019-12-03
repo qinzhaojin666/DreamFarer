@@ -10365,6 +10365,7 @@ MonoBehaviour:
   ambiencePath: event:/1-City/Ambience
   partyTransitionPath: event:/2-Party/RestaurantAmbience
   fadeNoisePath: event:/1-City/MemoryFadeIn
+  startingCallPath: event:/1-City/IntroCall
   memoryObjects:
   - {fileID: 636785503}
   - {fileID: 1871317273}
