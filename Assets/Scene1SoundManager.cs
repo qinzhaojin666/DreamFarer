@@ -55,11 +55,13 @@ public class Scene1SoundManager : MonoBehaviour {
     //   object while grabbing it breaks grabbing for that hand)
     IEnumerator DisableAfterGrabEnd(int current, OVRGrabbable currentMemoryG)
     {
-        while (currentMemoryG.isGrabbed)
-        {
+        while (currentMemoryG.isGrabbed) {
             yield return null;
         }
         yield return new WaitForSeconds(2f);
+        while (currentMemoryG.isGrabbed) {
+            yield return null;
+        }
         memoryObjects[current].SetActive(false);
     }
 
