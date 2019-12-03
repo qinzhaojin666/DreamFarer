@@ -60,7 +60,7 @@ public class Scene1SoundManager : MonoBehaviour {
         }
         yield return new WaitForSeconds(2f);
         while (currentMemoryG.isGrabbed) {
-            yield return null;
+            yield return new WaitForSeconds(0.05f);
         }
         memoryObjects[current].SetActive(false);
     }
