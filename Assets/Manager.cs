@@ -97,7 +97,7 @@ public class Manager : MonoBehaviour {
 
     IEnumerator enableBarObjects() {
 
-       for(int i = barObjects.transform.childCount-1; i >= 0; i--) {
+        for(int i = barObjects.transform.childCount-1; i >= 0; i--) {
             Transform child = barObjects.transform.GetChild(i);
             yield return new WaitForSeconds(.01f);
 
@@ -105,11 +105,10 @@ public class Manager : MonoBehaviour {
                 child.gameObject.SetActive(true);
             }
         }
-
+        
         scene2_sound_manager.StartAmbience();
         yield return new WaitForSeconds(3f);
         scene2_sound_manager.StartConverstaions();
-
     }
 
     IEnumerator disableBarObjects() {
