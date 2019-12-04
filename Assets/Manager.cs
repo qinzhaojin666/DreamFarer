@@ -92,6 +92,9 @@ public class Manager : MonoBehaviour {
             yield return null;
         }
         yield return new WaitForSeconds(2f);
+        while (currentMemoryG.isGrabbed) {
+            yield return new WaitForSeconds(0.05f);
+        }
         current.gameObject.SetActive(false);
     }
 
@@ -108,13 +111,28 @@ public class Manager : MonoBehaviour {
         
         scene2_sound_manager.StartAmbience();
         yield return new WaitForSeconds(3f);
-        scene2_sound_manager.StartConverstaions();
+        //scene2_sound_manager.StartConverstaions();
     }
 
+    public void startConversations() {
+        scene2_sound_manager.StartConverstaions();
+
+    }
     IEnumerator disableBarObjects() {
         foreach (Transform child in barObjects.transform) {
             yield return new WaitForSeconds(.01f);
-            StartCoroutine(fadeInAndOut(child.gameObject, false, 2f, true));
+            if (!child.gameObject.CompareTag("grabbable")) {
+                StartCoroutine(fadeInAndOut(child.gameObject, false, 2f, true));
+            }
+            else if (child.gameObject.activeInHierarchy) {
+                OVRGrabbable g = child.GetComponent<OVRGrabbable>();
+                if (g.isGrabbed) {
+                    StartCoroutine(disableAfterGrabEnd(child, g));
+                }
+                else {
+                    child.gameObject.SetActive(false);
+                }
+            }
         }
         startEnableIslandObjects();
     }
