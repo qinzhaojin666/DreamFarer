@@ -10399,6 +10399,7 @@ MonoBehaviour:
   phoneBooth: {fileID: 167366012}
   sun: {fileID: 1910963699}
   phoneGrabber: {fileID: 1889347724}
+  endFader: {fileID: 1806733203}
 --- !u!1 &1470869808
 GameObject:
   m_ObjectHideFlags: 0
@@ -13284,6 +13285,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: -1
+--- !u!114 &1806733203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806733201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df8e1d778abf442e4bec449c360e9e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeTime: 2
+  fadeColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
+  fadeOnStart: 1
+  renderQueue: 5000
 --- !u!1 &1806953691
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,8 @@ public class Scene3SoundManager : MonoBehaviour {
     public Light sun;
     public OVRGrabbable phoneGrabber;
 
+    public OVRScreenFade endFader;
+
     // FMOD sound event instances
     private FMOD.Studio.EventInstance ambienceInstance;
     private FMOD.Studio.EventInstance ringInstance;
@@ -67,6 +69,7 @@ public class Scene3SoundManager : MonoBehaviour {
     }
     public void StopCall() {
         StopSoundEvent(callInstance);
+        callDone = false;
     }
 
     // Start is called before the first frame update
@@ -93,7 +96,6 @@ public class Scene3SoundManager : MonoBehaviour {
         RenderSettings.skybox = endSky;
 
         yield return null;
-
     }
 
     public void FadeToDaytime() {
@@ -112,6 +114,7 @@ public class Scene3SoundManager : MonoBehaviour {
         callInstance.getPlaybackState(out FMOD.Studio.PLAYBACK_STATE state);
         if (state == FMOD.Studio.PLAYBACK_STATE.STOPPED && callDone) {
             StopCall();
+            endFader.FadeOut();
         }
     }
 }
